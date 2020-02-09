@@ -2,3 +2,4 @@
 *.exe
 *wa.cpp
 .vs
+.gitignore
