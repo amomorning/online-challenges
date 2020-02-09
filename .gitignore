@@ -1,2 +1,4 @@
 .vscode
 *.exe
+*wa.cpp
+.vs
