@@ -1,5 +1,7 @@
 .vscode
 *.exe
 *wa.cpp
+*tle.py
+*wa.py
 .vs
 .gitignore
