@@ -1,30 +1,29 @@
 from queue import PriorityQueue
 import itertools
 
+
 def bfs(g, s):
-    global d, path
+    global d, num, a, weight
     q = PriorityQueue()
     d[s] = 0
     q.put((d[s], s))
-    
+    num[s] = 1
+    weight[s] = a[s]
 
     while not q.empty():
         dis, u = q.get()
         for v, w in g[u]:
-            if(d[u] + w <= d[v]):
+            if(d[u] + w < d[v]):
                 d[v] = d[u] + w
-                path[v].append(u)
                 q.put((d[v], v))
 
+                num[v] = num[u]
+                weight[v] = weight[u] + a[v]
+            elif(d[u] + w == d[v]):
+                num[v] = num[v] + num[u]
+                if(weight[u] + a[v] > weight[v]):
+                    weight[v] = weight[u] + a[v]
 
-def dfs(g, u, t):
-    global vis, count
-    vis[u] = 1
-    if(u == t):
-        count += 1
-        return
-    for v in g[u]:
-        dfs(g, v, t)
 
 # main
 n, m, s, t = map(int, input().split())
@@ -43,12 +42,8 @@ for i in range(m):
 
 
 d = [0x3f3f3f3f]*n
+weight, num = [0]*n, [0]*n
 bfs(G, t)
-# print(d)
-# print(path)
 
-count = 0
-vis = [0]*n
-dfs(path, s, t)
-# print(vis)
-print(count, sum(itertools.compress(a, vis)))
+
+print(num[s], weight[s])
