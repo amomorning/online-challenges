@@ -10,23 +10,20 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    100380,       2441]
-NotebookOptionsPosition[     96227,       2363]
-NotebookOutlinePosition[     96568,       2378]
-CellTagsIndexPosition[     96525,       2375]
+NotebookDataLength[    140789,       3368]
+NotebookOptionsPosition[    135110,       3263]
+NotebookOutlinePosition[    135484,       3279]
+CellTagsIndexPosition[    135441,       3276]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{"Get", "[", 
-  RowBox[{
-   RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<ProjectEuler.m\>\""}], 
-  "]"}]], "Input",
+Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.8423449031060114`*^9, 3.8423449325895243`*^9}, 
    3.842344988677728*^9, {3.8423454393663645`*^9, 3.842345442242358*^9}, {
-   3.8423532318994675`*^9, 3.842353232571144*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"d40be763-41db-406f-a4c0-c987a8cfb416"],
+   3.8423532318994675`*^9, 3.842353232571144*^9}, 
+   3.8425083378762283`*^9},ExpressionUUID->"d40be763-41db-406f-a4c0-\
+c987a8cfb416"],
 
 Cell[CellGroupData[{
 
@@ -228,11 +225,11 @@ there below one million?\\n\"\>", "InformationUsageText",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -507,11 +504,11 @@ are not included.\"\>", "InformationUsageText",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -2286,11 +2283,11 @@ what is the maximum digital sum?\"\>", "InformationUsageText",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -2359,10 +2356,914 @@ Cell[BoxData[
   RowBox[{"0.125`", ",", "972"}], "}"}]], "Output",
  CellChangeTimes->{3.8425023208133264`*^9},
  CellLabel->"Out[13]=",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE057"}]], "Input",
+ CellChangeTimes->{{3.842508307983486*^9, 3.8425083116545286`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"0898ab12-0902-47bc-81cc-3a598ffc28a2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"https://projecteuler.net/problem=57\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE057\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"https://projecteuler.net/problem=57\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> "https://projecteuler.net/problem=57",
+     "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "ProjectEuler`PE057"], 
+   False]]], "Output",
+ CellChangeTimes->{3.8425083124339695`*^9, 3.842508354915185*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"0d6f4f72-13b7-4533-91ce-0f308e2e0fbf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE057", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.842508759036018*^9, 3.842508761224718*^9}, {
+  3.842508907667011*^9, 3.842508991318598*^9}, {3.84250903986798*^9, 
+  3.84250904505799*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"17414c78-cdab-4c46-9092-400e5fe4efaf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", "153"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8425088166972885`*^9, {3.842508884728592*^9, 3.842508962222889*^9}, 
+   3.8425090455307817`*^9, 3.8425095240908504`*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"4890cea9-298c-480d-ab15-feb8322875aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE058"}]], "Input",
+ CellChangeTimes->{{3.842511907073181*^9, 3.8425119139131947`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"6f18d2d9-bb55-4634-a9de-02357d7bf5ee"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Starting with 1 and spiralling anticlockwise in the \
+following way, a square spiral with side length 7 is formed.\\n\\n37 36 35 34 \
+33 32 31 \\n38 17 16 15 14 13 30 \\n39 18  5  4  3 12 29 \\n40 19  6  1  2 11 \
+28 \\n41 20  7  8  9 10 27 \\n42 21 22 23 24 25 26 \\n43 44 45 46 47 48 49 \
+\\nIt is interesting to note that the odd squares lie along the bottom right \
+diagonal, but what is more interesting is that 8 out of the 13 numbers lying \
+along both diagonals are prime; that is, a ratio of 8/13 < 62%.  \\nIf one \
+complete new layer is wrapped around the spiral above, a square spiral with \
+side length 9 will be formed. If this process is continued, what is the side \
+length of the square spiral for which the ratio of primes along both \
+diagonals first falls below 10%?\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Assignment\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"OwnValues\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "OwnValues", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{"PE058", ":=", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "ProjectEuler`Private`getPrimeNum", "[", "#1", "]"}], 
+                    "&"}], ")"}], "/@", 
+                    RowBox[{"Range", "[", 
+                    RowBox[{"13100", ",", "13200"}], "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "<", "0.1`"}], "&"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE058\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Starting with 1 and spiralling anticlockwise in the \
+following way, a square spiral with side length 7 is formed.\\n\\n37 36 35 34 \
+33 32 31 \\n38 17 16 15 14 13 30 \\n39 18  5  4  3 12 29 \\n40 19  6  1  2 11 \
+28 \\n41 20  7  8  9 10 27 \\n42 21 22 23 24 25 26 \\n43 44 45 46 47 48 49 \
+\\nIt is interesting to note that the odd squares lie along the bottom right \
+diagonal, but what is more interesting is that 8 out of the 13 numbers lying \
+along both diagonals are prime; that is, a ratio of 8/13 < 62%.  \\nIf one \
+complete new layer is wrapped around the spiral above, a square spiral with \
+side length 9 will be formed. If this process is continued, what is the side \
+length of the square spiral for which the ratio of primes along both \
+diagonals first falls below 10%?\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "Starting with 1 and spiralling anticlockwise in the following way, a \
+square spiral with side length 7 is formed.\n\n37 36 35 34 33 32 31 \n38 17 \
+16 15 14 13 30 \n39 18  5  4  3 12 29 \n40 19  6  1  2 11 28 \n41 20  7  8  9 \
+10 27 \n42 21 22 23 24 25 26 \n43 44 45 46 47 48 49 \nIt is interesting to \
+note that the odd squares lie along the bottom right diagonal, but what is \
+more interesting is that 8 out of the 13 numbers lying along both diagonals \
+are prime; that is, a ratio of 8/13 < 62%.  \nIf one complete new layer is \
+wrapped around the spiral above, a square spiral with side length 9 will be \
+formed. If this process is continued, what is the side length of the square \
+spiral for which the ratio of primes along both diagonals first falls below \
+10%?", "Documentation" -> None, "OwnValues" -> 
+    Information`InformationValueForm[
+     OwnValues, ProjectEuler`PE058, {ProjectEuler`PE058 :> Part[
+         Select[
+          Map[ProjectEuler`Private`getPrimeNum[#]& , 
+           Range[13100, 13200]], Part[#, 2] < 0.1& ], 1]}], "UpValues" -> 
+    None, "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "ProjectEuler`PE058"], 
+   False]]], "Output",
+ CellChangeTimes->{3.84251191474146*^9, 3.8425176874065585`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"65176ad1-cad7-4b1f-aa36-ba3a70928ea3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE058", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8425119194550176`*^9, 3.8425119252409086`*^9}},
+ CellLabel->
+  "In[240]:=",ExpressionUUID->"91c80962-7083-4f2e-8e1e-7399970f6d75"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.671875`", ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"26241", ",", "0.09999809454850327`"}], "}"}], "[", "]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.842511928285203*^9, 3.842511947538224*^9}},
+ CellLabel->
+  "Out[240]=",ExpressionUUID->"e5975e65-fe51-4ab8-9438-caaff7bb6239"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<ProjectEuler.m\>\""}], 
+  "]"}]], "Input",
+ InitializationCell->True,
+ CellLabel->"In[5]:=",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE059"}]], "Input",
+ CellChangeTimes->{{3.8425174283488083`*^9, 3.842517431960788*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"daedf537-448b-4f7a-96c7-2e6d6f5aa174"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Each character on a computer is assigned a unique \
+code and the preferred standard is ASCII (American Standard Code for \
+Information Interchange). For example, uppercase A = 65, asterisk*= 42, and \
+lowercase k = 107.  \\nA modern encryption method is to take a text file, \
+convert the bytes to ASCII, then XOR each byte with a given value, taken from \
+a secret key. The advantage with the XOR function is that using the same \
+encryption key on the cipher text, restores the plain text; for example, 65 \
+XOR 42 = 107, then 107 XOR 42 = 65.  \\nFor unbreakable encryption, the key \
+is the same length as the plain text message, and the key is made up of \
+random bytes. The user would keep the encrypted message and the encryption \
+key in different locations, and without both halves, it is impossible to \
+decrypt the message.  \\nUnfortunately, this method is impractical for most \
+users, so the modified method is to use a password as a key. If the password \
+is shorter than the message, which is likely, the key is repeated cyclically \
+throughout the message. The balance for this method is using a sufficiently \
+long password key for security, but short enough to be memorable.  \\nYour \
+task has been made easy, as the encryption key consists of three lower case \
+characters. Using p059_cipher.txt (right click and 'Save Link/Target As...'), \
+a file containing the encrypted ASCII codes, and the knowledge that the plain \
+text must contain common English words, decrypt the message and find the sum \
+of the ASCII values in the original text.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Assignment\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"OwnValues\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "OwnValues", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{"PE059", ":=", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "Total", "[", "ProjectEuler`Private`PE059`decryCode", 
+                    "]"}], ",", 
+                    RowBox[{
+                    "FromCharacterCode", "[", 
+                    "ProjectEuler`Private`PE059`decryCode", "]"}]}], "}"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE059\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Each character on a computer is assigned a unique \
+code and the preferred standard is ASCII (American Standard Code for \
+Information Interchange). For example, uppercase A = 65, asterisk*= 42, and \
+lowercase k = 107.  \\nA modern encryption method is to take a text file, \
+convert the bytes to ASCII, then XOR each byte with a given value, taken from \
+a secret key. The advantage with the XOR function is that using the same \
+encryption key on the cipher text, restores the plain text; for example, 65 \
+XOR 42 = 107, then 107 XOR 42 = 65.  \\nFor unbreakable encryption, the key \
+is the same length as the plain text message, and the key is made up of \
+random bytes. The user would keep the encrypted message and the encryption \
+key in different locations, and without both halves, it is impossible to \
+decrypt the message.  \\nUnfortunately, this method is impractical for most \
+users, so the modified method is to use a password as a key. If the password \
+is shorter than the message, which is likely, the key is repeated cyclically \
+throughout the message. The balance for this method is using a sufficiently \
+long password key for security, but short enough to be memorable.  \\nYour \
+task has been made easy, as the encryption key consists of three lower case \
+characters. Using p059_cipher.txt (right click and 'Save Link/Target As...'), \
+a file containing the encrypted ASCII codes, and the knowledge that the plain \
+text must contain common English words, decrypt the message and find the sum \
+of the ASCII values in the original text.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "Each character on a computer is assigned a unique code and the preferred \
+standard is ASCII (American Standard Code for Information Interchange). For \
+example, uppercase A = 65, asterisk*= 42, and lowercase k = 107.  \nA modern \
+encryption method is to take a text file, convert the bytes to ASCII, then \
+XOR each byte with a given value, taken from a secret key. The advantage with \
+the XOR function is that using the same encryption key on the cipher text, \
+restores the plain text; for example, 65 XOR 42 = 107, then 107 XOR 42 = 65.  \
+\nFor unbreakable encryption, the key is the same length as the plain text \
+message, and the key is made up of random bytes. The user would keep the \
+encrypted message and the encryption key in different locations, and without \
+both halves, it is impossible to decrypt the message.  \nUnfortunately, this \
+method is impractical for most users, so the modified method is to use a \
+password as a key. If the password is shorter than the message, which is \
+likely, the key is repeated cyclically throughout the message. The balance \
+for this method is using a sufficiently long password key for security, but \
+short enough to be memorable.  \nYour task has been made easy, as the \
+encryption key consists of three lower case characters. Using p059_cipher.txt \
+(right click and 'Save Link/Target As...'), a file containing the encrypted \
+ASCII codes, and the knowledge that the plain text must contain common \
+English words, decrypt the message and find the sum of the ASCII values in \
+the original text.", "Documentation" -> None, "OwnValues" -> 
+    Information`InformationValueForm[
+     OwnValues, ProjectEuler`PE059, {ProjectEuler`PE059 :> {
+         Total[ProjectEuler`Private`PE059`decryCode], 
+         FromCharacterCode[ProjectEuler`Private`PE059`decryCode]}}], 
+    "UpValues" -> None, "DownValues" -> None, "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "ProjectEuler`PE059"], False]]], "Output",
+ CellChangeTimes->{3.8425174324998193`*^9, 3.84251769211197*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"5d7f610f-41cc-45e4-a898-5a80a61ecc84"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE059", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8425174352842903`*^9, 3.8425174414196815`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"cbf62cb1-03c9-4559-896e-526d6027554f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "129448", 
+      ",", "\<\"An extract taken from the introduction of one of Euler's most \
+celebrated papers, \\\"De summis serierum reciprocarum\\\" [On the sums of \
+series of reciprocals]: I have recently found, quite unexpectedly, an elegant \
+expression for the entire sum of this series 1 + 1/4 + 1/9 + 1/16 + etc., \
+which depends on the quadrature of the circle, so that if the true sum of \
+this series is obtained, from it at once the quadrature of the circle \
+follows. Namely, I have found that the sum of this series is a sixth part of \
+the square of the perimeter of the circle whose diameter is 1; or by putting \
+the sum of this series equal to s, it has the ratio sqrt(6) multiplied by s \
+to 1 of the perimeter to the diameter. I will soon show that the sum of this \
+series to be approximately 1.644934066842264364; and from multiplying this \
+number by six, and then taking the square root, the number \
+3.141592653589793238 is indeed produced, which expresses the perimeter of a \
+circle whose diameter is 1. Following again the same steps by which I had \
+arrived at this sum, I have discovered that the sum of the series 1 + 1/16 + \
+1/81 + 1/256 + 1/625 + etc. also depends on the quadrature of the circle. \
+Namely, the sum of this multiplied by 90 gives the biquadrate (fourth power) \
+of the circumference of the perimeter of a circle whose diameter is 1. And by \
+similar reasoning I have likewise been able to determine the sums of the \
+subsequent series in which the exponents are even numbers.\"\>"}], "}"}], "[",
+     "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.842517441920534*^9, 3.842517542689879*^9, 
+  3.842517696274572*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"f162d2c1-02f0-407a-91f1-4345ff96ba0e"]
 }, Open  ]]
 },
-WindowSize->{858, 818},
-WindowMargins->{{Automatic, 1}, {17, Automatic}},
+WindowSize->{927, 740},
+WindowMargins->{{233, Automatic}, {115, Automatic}},
+Magnification:>1.5 Inherited,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2377,71 +3278,97 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 419, 8, 85, "Input",ExpressionUUID->"d40be763-41db-406f-a4c0-c987a8cfb416"],
+Cell[558, 20, 307, 5, 43, "Input",ExpressionUUID->"d40be763-41db-406f-a4c0-c987a8cfb416"],
 Cell[CellGroupData[{
-Cell[1002, 32, 196, 3, 28, "Input",ExpressionUUID->"b3920991-1d6b-4746-bbda-dc8e1ec684c6"],
-Cell[1201, 37, 10644, 256, 237, "Output",ExpressionUUID->"5f032c4c-f988-49ab-a605-2bcb7d9ff874"]
+Cell[890, 29, 196, 3, 43, "Input",ExpressionUUID->"b3920991-1d6b-4746-bbda-dc8e1ec684c6"],
+Cell[1089, 34, 10646, 256, 425, "Output",ExpressionUUID->"5f032c4c-f988-49ab-a605-2bcb7d9ff874"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11882, 298, 293, 5, 28, "Input",ExpressionUUID->"fca88989-2bdb-48e3-85cc-e3be6bf6d70a"],
-Cell[12178, 305, 203, 4, 32, "Output",ExpressionUUID->"89d4de35-9193-4ce6-97f6-2c9deda384e3"]
+Cell[11772, 295, 293, 5, 43, "Input",ExpressionUUID->"fca88989-2bdb-48e3-85cc-e3be6bf6d70a"],
+Cell[12068, 302, 203, 4, 49, "Output",ExpressionUUID->"89d4de35-9193-4ce6-97f6-2c9deda384e3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12418, 314, 192, 3, 28, "Input",ExpressionUUID->"c6b0304e-21fb-4196-8d89-9e1703aeec3b"],
-Cell[12613, 319, 10278, 252, 141, "Output",ExpressionUUID->"6e70f94e-eb6d-4915-b662-2ac864be9ca1"]
+Cell[12308, 311, 192, 3, 43, "Input",ExpressionUUID->"c6b0304e-21fb-4196-8d89-9e1703aeec3b"],
+Cell[12503, 316, 10280, 252, 225, "Output",ExpressionUUID->"6e70f94e-eb6d-4915-b662-2ac864be9ca1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22928, 576, 232, 4, 28, "Input",ExpressionUUID->"29761f78-5625-4943-b103-8a0d82de4189"],
-Cell[23163, 582, 204, 4, 32, "Output",ExpressionUUID->"1872a706-b6e8-41e3-8613-9529ce212e54"]
+Cell[22820, 573, 232, 4, 42, "Input",ExpressionUUID->"29761f78-5625-4943-b103-8a0d82de4189"],
+Cell[23055, 579, 204, 4, 48, "Output",ExpressionUUID->"1872a706-b6e8-41e3-8613-9529ce212e54"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23404, 591, 192, 3, 28, "Input",ExpressionUUID->"3905d752-0d26-47d4-b2b4-99fe1f373f1b"],
-Cell[23599, 596, 11613, 278, 165, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
+Cell[23296, 588, 192, 3, 42, "Input",ExpressionUUID->"3905d752-0d26-47d4-b2b4-99fe1f373f1b"],
+Cell[23491, 593, 11613, 278, 247, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35249, 879, 232, 4, 28, "Input",ExpressionUUID->"1ff63718-2d41-48a6-aa93-90e5846d742d"],
-Cell[35484, 885, 361, 9, 40, "Message",ExpressionUUID->"dd08a57c-e89a-4fc0-bb95-e8e73d7f9898"],
-Cell[35848, 896, 363, 9, 40, "Message",ExpressionUUID->"4d315f40-fd9c-45df-ae8e-bd02825d8aac"],
-Cell[36214, 907, 361, 9, 40, "Message",ExpressionUUID->"5f0d493b-cc13-4373-baa0-df09dacdf847"],
-Cell[36578, 918, 443, 10, 21, "Message",ExpressionUUID->"7c7ebab1-50f1-4246-a685-f502e7d77edc"],
-Cell[37024, 930, 205, 4, 32, "Output",ExpressionUUID->"65f6663a-2b25-4502-adb0-82b7aacfa4ea"]
+Cell[35141, 876, 232, 4, 42, "Input",ExpressionUUID->"1ff63718-2d41-48a6-aa93-90e5846d742d"],
+Cell[35376, 882, 361, 9, 60, "Message",ExpressionUUID->"dd08a57c-e89a-4fc0-bb95-e8e73d7f9898"],
+Cell[35740, 893, 363, 9, 60, "Message",ExpressionUUID->"4d315f40-fd9c-45df-ae8e-bd02825d8aac"],
+Cell[36106, 904, 361, 9, 60, "Message",ExpressionUUID->"5f0d493b-cc13-4373-baa0-df09dacdf847"],
+Cell[36470, 915, 443, 10, 31, "Message",ExpressionUUID->"7c7ebab1-50f1-4246-a685-f502e7d77edc"],
+Cell[36916, 927, 205, 4, 48, "Output",ExpressionUUID->"65f6663a-2b25-4502-adb0-82b7aacfa4ea"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37266, 939, 268, 4, 28, "Input",ExpressionUUID->"10992108-eba3-46d3-972a-5932afff3a3c"],
-Cell[37537, 945, 11134, 266, 189, "Output",ExpressionUUID->"a2efe9b1-6a15-4dcc-80b6-3c3daf41e97f"]
+Cell[37158, 936, 268, 4, 42, "Input",ExpressionUUID->"10992108-eba3-46d3-972a-5932afff3a3c"],
+Cell[37429, 942, 11134, 266, 283, "Output",ExpressionUUID->"a2efe9b1-6a15-4dcc-80b6-3c3daf41e97f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48708, 1216, 287, 5, 28, "Input",ExpressionUUID->"52bdcd5f-cda5-46ae-b5e9-5e170ce943c8"],
-Cell[48998, 1223, 257, 6, 32, "Output",ExpressionUUID->"bc282f4b-1e2a-4a90-9065-982dc8b2d847"]
+Cell[48600, 1213, 287, 5, 42, "Input",ExpressionUUID->"52bdcd5f-cda5-46ae-b5e9-5e170ce943c8"],
+Cell[48890, 1220, 257, 6, 48, "Output",ExpressionUUID->"bc282f4b-1e2a-4a90-9065-982dc8b2d847"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49292, 1234, 195, 3, 28, "Input",ExpressionUUID->"f711aa9f-16a6-40af-b1c0-26c0418d3918"],
-Cell[49490, 1239, 10625, 260, 117, "Output",ExpressionUUID->"cc1e554c-aad6-4606-a551-ea938955eee7"]
+Cell[49184, 1231, 195, 3, 42, "Input",ExpressionUUID->"f711aa9f-16a6-40af-b1c0-26c0418d3918"],
+Cell[49382, 1236, 10625, 260, 175, "Output",ExpressionUUID->"cc1e554c-aad6-4606-a551-ea938955eee7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60152, 1504, 233, 4, 28, "Input",ExpressionUUID->"5f156a7b-aa83-44d2-b70a-185d3e006638"],
-Cell[60388, 1510, 256, 5, 32, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
+Cell[60044, 1501, 233, 4, 42, "Input",ExpressionUUID->"5f156a7b-aa83-44d2-b70a-185d3e006638"],
+Cell[60280, 1507, 256, 5, 48, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60681, 1520, 196, 3, 28, "Input",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
-Cell[60880, 1525, 9210, 223, 189, "Output",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
+Cell[60573, 1517, 196, 3, 42, "Input",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
+Cell[60772, 1522, 9210, 223, 283, "Output",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70127, 1753, 335, 6, 28, "Input",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
-Cell[70465, 1761, 205, 4, 32, "Output",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
+Cell[70019, 1750, 335, 6, 42, "Input",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
+Cell[70357, 1758, 205, 4, 48, "Output",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70707, 1770, 242, 4, 28, "Input",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
-Cell[70952, 1776, 13467, 289, 501, "Output",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
+Cell[70599, 1767, 242, 4, 42, "Input",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
+Cell[70844, 1773, 13467, 289, 751, "Output",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84456, 2070, 232, 4, 28, "Input",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
-Cell[84691, 2076, 203, 4, 65, "Output",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
+Cell[84348, 2067, 232, 4, 42, "Input",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
+Cell[84583, 2073, 203, 4, 48, "Output",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84931, 2085, 283, 5, 48, "Input",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
-Cell[85217, 2092, 10788, 262, 141, "Output",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
-Cell[96008, 2356, 203, 4, 32, "Output",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
+Cell[84823, 2082, 283, 5, 72, "Input",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
+Cell[85109, 2089, 10790, 262, 305, "Output",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
+Cell[95902, 2353, 203, 4, 49, "Output",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[96142, 2362, 194, 3, 43, "Input",ExpressionUUID->"0898ab12-0902-47bc-81cc-3a598ffc28a2"],
+Cell[96339, 2367, 8378, 212, 195, "Output",ExpressionUUID->"0d6f4f72-13b7-4533-91ce-0f308e2e0fbf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[104754, 2584, 327, 6, 43, "Input",ExpressionUUID->"17414c78-cdab-4c46-9092-400e5fe4efaf"],
+Cell[105084, 2592, 301, 6, 49, "Output",ExpressionUUID->"4890cea9-298c-480d-ab15-feb8322875aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[105422, 2603, 194, 3, 43, "Input",ExpressionUUID->"6f18d2d9-bb55-4634-a9de-02357d7bf5ee"],
+Cell[105619, 2608, 12161, 276, 745, "Output",ExpressionUUID->"65176ad1-cad7-4b1f-aa36-ba3a70928ea3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117817, 2889, 239, 5, 43, "Input",ExpressionUUID->"91c80962-7083-4f2e-8e1e-7399970f6d75"],
+Cell[118059, 2896, 331, 9, 49, "Output",ExpressionUUID->"e5975e65-fe51-4ab8-9438-caaff7bb6239"]
+}, Open  ]],
+Cell[118405, 2908, 249, 6, 67, "Input",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[118679, 2918, 194, 3, 43, "Input",ExpressionUUID->"daedf537-448b-4f7a-96c7-2e6d6f5aa174"],
+Cell[118876, 2923, 14098, 296, 905, "Output",ExpressionUUID->"5d7f610f-41cc-45e4-a898-5a80a61ecc84"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[133011, 3224, 234, 4, 43, "Input",ExpressionUUID->"cbf62cb1-03c9-4559-896e-526d6027554f"],
+Cell[133248, 3230, 1846, 30, 804, "Output",ExpressionUUID->"f162d2c1-02f0-407a-91f1-4345ff96ba0e"]
 }, Open  ]]
 }
 ]

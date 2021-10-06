@@ -25,6 +25,15 @@ PE055::usage="If we take 47, reverse and add, 47 + 74 = 121, which is palindromi
 
 PE056::usage="A googol (10100) is a massive number: one followed by one-hundred zeros; 100100 is almost unimaginably large: one followed by two-hundred zeros. Despite their size, the sum of the digits in each number is only 1.  \nConsidering natural numbers of the form, ab, where a, b < 100, what is the maximum digital sum?"
 
+PE057::usage="https://projecteuler.net/problem=57"
+
+PE058::usage="Starting with 1 and spiralling anticlockwise in the following way, a square spiral with side length 7 is formed.
+\n37 36 35 34 33 32 31 \n38 17 16 15 14 13 30 \n39 18  5  4  3 12 29 \n40 19  6  1  2 11 28 \n41 20  7  8  9 10 27 \n42 21 22 23 24 25 26 \n43 44 45 46 47 48 49 \nIt is interesting to note that the odd squares lie along the bottom right diagonal, but what is more interesting is that 8 out of the 13 numbers lying along both diagonals are prime; that is, a ratio of 8/13 < 62%.  \nIf one complete new layer is wrapped around the spiral above, a square spiral with side length 9 will be formed. If this process is continued, what is the side length of the square spiral for which the ratio of primes along both diagonals first falls below 10%?" 
+
+(* PE059::usage="https://projecteuler.net/problem=59" *)
+PE059::usage="Each character on a computer is assigned a unique code and the preferred standard is ASCII (American Standard Code for Information Interchange). For example, uppercase A = 65, asterisk*= 42, and lowercase k = 107.  \nA modern encryption method is to take a text file, convert the bytes to ASCII, then XOR each byte with a given value, taken from a secret key. The advantage with the XOR function is that using the same encryption key on the cipher text, restores the plain text; for example, 65 XOR 42 = 107, then 107 XOR 42 = 65.  \nFor unbreakable encryption, the key is the same length as the plain text message, and the key is made up of random bytes. The user would keep the encrypted message and the encryption key in different locations, and without both halves, it is impossible to decrypt the message.  \nUnfortunately, this method is impractical for most users, so the modified method is to use a password as a key. If the password is shorter than the message, which is likely, the key is repeated cyclically throughout the message. The balance for this method is using a sufficiently long password key for security, but short enough to be memorable.  \nYour task has been made easy, as the encryption key consists of three lower case characters. Using p059_cipher.txt (right click and 'Save Link/Target As...'), a file containing the encrypted ASCII codes, and the knowledge that the plain text must contain common English words, decrypt the message and find the sum of the ASCII values in the original text."
+
+
 Begin["`Private`"]
 
 (* PE033 *)
@@ -92,9 +101,38 @@ PE055[]:=Select[Range[10000], LychrelQ] // Length
 PE056[]:=Max[Total@IntegerDigits[Power @@ #] & /@ 
   Flatten[Outer[List, Range[100], Range[100]], 1]]
 
+(* PE057 *)
+PE057[]:=Select[NumeratorDenominator[NestList[1/(2 + #) &, 0, 1000] + 1], 
+  IntegerLength[#[[1]]] > IntegerLength[#[[2]]] &] // Length
+
+
+(* PE058 *)
+allSpiralNum = 
+  Flatten[{1, Table[{x, x, x, x}, {x, 20000}]*2}] // Accumulate;
+getPrimeNum[n_] := 
+ With[{part = allSpiralNum[[1 ;; 4 n + 1]]}, {part[[-1]] - 
+    part[[-2]] + 1, N[Length[Select[part, PrimeQ]]/Length[part]]}]
+PE058:=Select[getPrimeNum[#] & /@ Range[13100, 13200], #[[2]] < 0.1 &][[1]]
+
+
+(* PE059 *)
+Begin["`PE059`"]
+str = Import[
+   "https://projecteuler.net/project/resources/p059_cipher.txt"];
+strCode = StringSplit[str, ","];
+key = Table[
+   BitXor[Interpreter["Integer"][
+     Last[Normal[Sort[Counts[strCode[[start ;; -1 ;; 3]]]]]][[1]]], 
+    32], {start, 3}] // RotateRight;
+strIndex = Table[{i, strCode[[i]]}, {i, Length[strCode]}];
+decryCode = BitXor[Interpreter["Integer"][#[[2]]],
+     key[[Mod[#[[1]], 3] + 1]]
+     ] & /@ strIndex;
+PE059:={Total[decryCode],FromCharacterCode[decryCode]}
+End[]
+
 End[]
 
 EndPackage[]
-
 
 
