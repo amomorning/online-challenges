@@ -35,6 +35,7 @@ PE059::usage="Each character on a computer is assigned a unique code and the pre
 
 PE060::usage="The primes 3, 7, 109, and 673, are quite remarkable. By taking any two primes and concatenating them in any order the result will always be prime. For example, taking 7 and 109, both 7109 and 1097 are prime. The sum of these four primes, 792, represents the lowest sum for a set of four primes with this property.  \nFind the lowest sum for a set of five primes for which any two primes concatenate to produce another prime."
 
+PE061::usage="https://projecteuler.net/problem=61\nFind the sum of the only ordered set of six cyclic 4-digit numbers for which each polygonal type: triangle, square, pentagonal, hexagonal, heptagonal, and octagonal, is represented by a different number in the set."
 
 Begin["`Private`"]
 
@@ -142,6 +143,20 @@ primePairs =
    primePairQ];
 PE060[]:=Plus @@@ FindClique[Graph[UndirectedEdge @@@ primePairs], {5}]
 
+
+(* PE061 *)
+polygonalNumbers = 
+  Select[#, 1000 <= # < 10000 && Mod[#, 100] > 10 &] & /@ 
+   Table[PolygonalNumber[x, y], {x, 3, 8}, {y, 1, 200}];
+cyclicalPairQ[list_, n_] := 
+ Select[polygonalNumbers[[n]], MemberQ[Mod[list, 100], Floor[#/100]] &]
+cyclicalPolygonalQ[list_] := 
+ With[{fold = FoldList[cyclicalPairQ, polygonalNumbers[[1]], list]}, 
+  Length@Last[fold] > 0
+   && fold[[-1]] == fold[[-7]]]
+PE061[]:=Total@FoldList[cyclicalPairQ, polygonalNumbers[[1]], 
+   First[Select[Flatten[{#, 1, #}] & /@ Permutations[Range[2, 6]], 
+     cyclicalPolygonalQ]]][[-6 ;; -1]]
 
 End[]
 
