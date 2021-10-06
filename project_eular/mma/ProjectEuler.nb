@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     63584,       1575]
-NotebookOptionsPosition[     60660,       1518]
-NotebookOutlinePosition[     61002,       1533]
-CellTagsIndexPosition[     60959,       1530]
+NotebookDataLength[    100380,       2441]
+NotebookOptionsPosition[     96227,       2363]
+NotebookOutlinePosition[     96568,       2378]
+CellTagsIndexPosition[     96525,       2375]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,7 +26,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.8423449031060114`*^9, 3.8423449325895243`*^9}, 
    3.842344988677728*^9, {3.8423454393663645`*^9, 3.842345442242358*^9}, {
    3.8423532318994675`*^9, 3.842353232571144*^9}},
- CellLabel->"In[56]:=",ExpressionUUID->"d40be763-41db-406f-a4c0-c987a8cfb416"],
+ CellLabel->"In[11]:=",ExpressionUUID->"d40be763-41db-406f-a4c0-c987a8cfb416"],
 
 Cell[CellGroupData[{
 
@@ -1514,10 +1514,855 @@ Cell[BoxData[
    RowBox[{"{", "142857", "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.8423570611740074`*^9, 3.842357071675216*^9}},
  CellLabel->"Out[59]=",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE053"}]], "Input",
+ CellChangeTimes->{{3.8424997281246405`*^9, 3.8424997316616755`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"There are exactly ten ways of selecting three from \
+five, 12345: \\n123, 124, 125, 134, 135, 145, 234, 235, 245, and 345\\nIn \
+combinatorics, we use the notation, (5 3)=10\\nIt's not until n=23, that a \
+value exceeds one-million (23 10)=1144066\\nHow many, not necessarily \
+distinct, values of (n r) for 1<=n<=100, are greater than one-million?\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE053\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"There are exactly ten ways of selecting three from \
+five, 12345: \\n123, 124, 125, 134, 135, 145, 234, 235, 245, and 345\\nIn \
+combinatorics, we use the notation, (5 3)=10\\nIt's not until n=23, that a \
+value exceeds one-million (23 10)=1144066\\nHow many, not necessarily \
+distinct, values of (n r) for 1<=n<=100, are greater than one-million?\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "There are exactly ten ways of selecting three from five, 12345: \n123, \
+124, 125, 134, 135, 145, 234, 235, 245, and 345\nIn combinatorics, we use the \
+notation, (5 3)=10\nIt's not until n=23, that a value exceeds one-million (23 \
+10)=1144066\nHow many, not necessarily distinct, values of (n r) for \
+1<=n<=100, are greater than one-million?", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "ProjectEuler`PE053"], False]]], "Output",
+ CellChangeTimes->{3.8424997326680484`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE053", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.842499779652923*^9, 3.842499831418276*^9}, {
+  3.8424998698723445`*^9, 3.8424999055609694`*^9}, {3.842500197968321*^9, 
+  3.8425002154715085`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.015625`", ",", "4075"}], "}"}]], "Output",
+ CellChangeTimes->{3.842500216253734*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE055"}]], "Input",
+ CellChangeTimes->{{3.842500376368226*^9, 3.842500436574497*^9}, {
+  3.842501599672203*^9, 3.842501602183405*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"If we take 47, reverse and add, 47 + 74 = 121, \
+which is palindromic.  \\nNot all numbers produce palindromes so quickly. For \
+example, \\n \\n349 + 943 = 1292, \\n1292 + 2921 = 4213 \\n4213 + 3124 = 7337 \
+\\n \\nThat is, 349 took three iterations to arrive at a palindrome.  \
+\\nAlthough no one has proved it yet, it is thought that some numbers, like \
+196, never produce a palindrome. A number that never forms a palindrome \
+through the reverse and add process is called a Lychrel number. Due to the \
+theoretical nature of these numbers, and for the purpose of this problem, we \
+shall assume that a number is Lychrel until proven otherwise. In addition you \
+are given that for every number below ten-thousand, it will either (i) become \
+a palindrome in less than fifty iterations, or, (ii) no one, with all the \
+computing power that exists, has managed so far to map it to a palindrome. In \
+fact, 10677 is the first number to be shown to require over fifty iterations \
+before producing a palindrome: 4668731596684224866951378664 (53 iterations, \
+28-digits).  \\nSurprisingly, there are palindromic numbers that are \
+themselves Lychrel numbers; the first example is 4994.  \\nHow many Lychrel \
+numbers are there below ten-thousand?  \\nNOTE: Wording was modified slightly \
+on 24 April 2007 to emphasise the theoretical nature of Lychrel numbers.\"\>",
+              "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"PE055", "[", "]"}], ":=", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{"Range", "[", "10000", "]"}], ",", 
+                    "ProjectEuler`Private`LychrelQ"}], "]"}], "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE055\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"If we take 47, reverse and add, 47 + 74 = 121, \
+which is palindromic.  \\nNot all numbers produce palindromes so quickly. For \
+example, \\n \\n349 + 943 = 1292, \\n1292 + 2921 = 4213 \\n4213 + 3124 = 7337 \
+\\n \\nThat is, 349 took three iterations to arrive at a palindrome.  \
+\\nAlthough no one has proved it yet, it is thought that some numbers, like \
+196, never produce a palindrome. A number that never forms a palindrome \
+through the reverse and add process is called a Lychrel number. Due to the \
+theoretical nature of these numbers, and for the purpose of this problem, we \
+shall assume that a number is Lychrel until proven otherwise. In addition you \
+are given that for every number below ten-thousand, it will either (i) become \
+a palindrome in less than fifty iterations, or, (ii) no one, with all the \
+computing power that exists, has managed so far to map it to a palindrome. In \
+fact, 10677 is the first number to be shown to require over fifty iterations \
+before producing a palindrome: 4668731596684224866951378664 (53 iterations, \
+28-digits).  \\nSurprisingly, there are palindromic numbers that are \
+themselves Lychrel numbers; the first example is 4994.  \\nHow many Lychrel \
+numbers are there below ten-thousand?  \\nNOTE: Wording was modified slightly \
+on 24 April 2007 to emphasise the theoretical nature of Lychrel numbers.\"\>",
+              "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "If we take 47, reverse and add, 47 + 74 = 121, which is palindromic.  \n\
+Not all numbers produce palindromes so quickly. For example, \n \n349 + 943 = \
+1292, \n1292 + 2921 = 4213 \n4213 + 3124 = 7337 \n \nThat is, 349 took three \
+iterations to arrive at a palindrome.  \nAlthough no one has proved it yet, \
+it is thought that some numbers, like 196, never produce a palindrome. A \
+number that never forms a palindrome through the reverse and add process is \
+called a Lychrel number. Due to the theoretical nature of these numbers, and \
+for the purpose of this problem, we shall assume that a number is Lychrel \
+until proven otherwise. In addition you are given that for every number below \
+ten-thousand, it will either (i) become a palindrome in less than fifty \
+iterations, or, (ii) no one, with all the computing power that exists, has \
+managed so far to map it to a palindrome. In fact, 10677 is the first number \
+to be shown to require over fifty iterations before producing a palindrome: \
+4668731596684224866951378664 (53 iterations, 28-digits).  \nSurprisingly, \
+there are palindromic numbers that are themselves Lychrel numbers; the first \
+example is 4994.  \nHow many Lychrel numbers are there below ten-thousand?  \n\
+NOTE: Wording was modified slightly on 24 April 2007 to emphasise the \
+theoretical nature of Lychrel numbers.", "Documentation" -> None, "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, ProjectEuler`PE055, {ProjectEuler`PE055[] :> Length[
+         Select[
+          Range[10000], ProjectEuler`Private`LychrelQ]]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "ProjectEuler`PE055"], False]]], "Output",
+ CellChangeTimes->{{3.842500389447567*^9, 3.8425004333657837`*^9}, 
+   3.842501603221997*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE055", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8425019415734606`*^9, 3.842501946259999*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.640625`", ",", "249"}], "}"}]], "Output",
+ CellChangeTimes->{3.842501947248639*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"?", "PE056"}], "\[IndentingNewLine]", 
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE056", "[", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8425022926516905`*^9, 3.84250231205977*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"A googol (10100) is a massive number: one followed \
+by one-hundred zeros; 100100 is almost unimaginably large: one followed by \
+two-hundred zeros. Despite their size, the sum of the digits in each number \
+is only 1.  \\nConsidering natural numbers of the form, ab, where a, b < 100, \
+what is the maximum digital sum?\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"PE056", "[", "]"}], ":=", 
+                    RowBox[{"Max", "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Total", "[", 
+                    RowBox[{"IntegerDigits", "[", 
+                    RowBox[{"Power", "@@", "#1"}], "]"}], "]"}], "&"}], ")"}],
+                     "/@", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{
+                    RowBox[{"Outer", "[", 
+                    RowBox[{"List", ",", 
+                    RowBox[{"Range", "[", "100", "]"}], ",", 
+                    RowBox[{"Range", "[", "100", "]"}]}], "]"}], ",", "1"}], 
+                    "]"}]}], "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE056\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"A googol (10100) is a massive number: one followed \
+by one-hundred zeros; 100100 is almost unimaginably large: one followed by \
+two-hundred zeros. Despite their size, the sum of the digits in each number \
+is only 1.  \\nConsidering natural numbers of the form, ab, where a, b < 100, \
+what is the maximum digital sum?\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "A googol (10100) is a massive number: one followed by one-hundred zeros; \
+100100 is almost unimaginably large: one followed by two-hundred zeros. \
+Despite their size, the sum of the digits in each number is only 1.  \n\
+Considering natural numbers of the form, ab, where a, b < 100, what is the \
+maximum digital sum?", "Documentation" -> None, "OwnValues" -> None, 
+    "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, ProjectEuler`PE056, {ProjectEuler`PE056[] :> Max[
+         Map[Total[
+           IntegerDigits[
+            Apply[Power, #]]]& , 
+          Flatten[
+           Outer[List, 
+            Range[100], 
+            Range[100]], 1]]]}], "SubValues" -> None, "DefaultValues" -> None,
+     "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "ProjectEuler`PE056"], 
+   False]]], "Output",
+ CellChangeTimes->{3.842502320689718*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.125`", ",", "972"}], "}"}]], "Output",
+ CellChangeTimes->{3.8425023208133264`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
 }, Open  ]]
 },
-WindowSize->{962, 818},
-WindowMargins->{{Automatic, -6}, {22, Automatic}},
+WindowSize->{858, 818},
+WindowMargins->{{Automatic, 1}, {17, Automatic}},
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1551,7 +2396,7 @@ Cell[23163, 582, 204, 4, 32, "Output",ExpressionUUID->"1872a706-b6e8-41e3-8613-9
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[23404, 591, 192, 3, 28, "Input",ExpressionUUID->"3905d752-0d26-47d4-b2b4-99fe1f373f1b"],
-Cell[23599, 596, 11613, 278, 141, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
+Cell[23599, 596, 11613, 278, 165, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[35249, 879, 232, 4, 28, "Input",ExpressionUUID->"1ff63718-2d41-48a6-aa93-90e5846d742d"],
@@ -1575,7 +2420,28 @@ Cell[49490, 1239, 10625, 260, 117, "Output",ExpressionUUID->"cc1e554c-aad6-4606-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[60152, 1504, 233, 4, 28, "Input",ExpressionUUID->"5f156a7b-aa83-44d2-b70a-185d3e006638"],
-Cell[60388, 1510, 256, 5, 65, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
+Cell[60388, 1510, 256, 5, 32, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60681, 1520, 196, 3, 28, "Input",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
+Cell[60880, 1525, 9210, 223, 189, "Output",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70127, 1753, 335, 6, 28, "Input",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
+Cell[70465, 1761, 205, 4, 32, "Output",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70707, 1770, 242, 4, 28, "Input",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
+Cell[70952, 1776, 13467, 289, 501, "Output",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84456, 2070, 232, 4, 28, "Input",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
+Cell[84691, 2076, 203, 4, 65, "Output",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84931, 2085, 283, 5, 48, "Input",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
+Cell[85217, 2092, 10788, 262, 141, "Output",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
+Cell[96008, 2356, 203, 4, 32, "Output",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
 }, Open  ]]
 }
 ]

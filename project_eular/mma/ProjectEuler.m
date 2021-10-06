@@ -19,6 +19,11 @@ PE050::usage="The prime 41, can be written as the sum of six consecutive primes:
 
 PE052::usage="It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.  \nFind the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits."
 
+PE053::usage="There are exactly ten ways of selecting three from five, 12345: \n123, 124, 125, 134, 135, 145, 234, 235, 245, and 345\nIn combinatorics, we use the notation, (5 3)=10\nIt's not until n=23, that a value exceeds one-million (23 10)=1144066\nHow many, not necessarily distinct, values of (n r) for 1<=n<=100, are greater than one-million?"
+
+PE055::usage="If we take 47, reverse and add, 47 + 74 = 121, which is palindromic.  \nNot all numbers produce palindromes so quickly. For example, \n \n349 + 943 = 1292, \n1292 + 2921 = 4213 \n4213 + 3124 = 7337 \n \nThat is, 349 took three iterations to arrive at a palindrome.  \nAlthough no one has proved it yet, it is thought that some numbers, like 196, never produce a palindrome. A number that never forms a palindrome through the reverse and add process is called a Lychrel number. Due to the theoretical nature of these numbers, and for the purpose of this problem, we shall assume that a number is Lychrel until proven otherwise. In addition you are given that for every number below ten-thousand, it will either (i) become a palindrome in less than fifty iterations, or, (ii) no one, with all the computing power that exists, has managed so far to map it to a palindrome. In fact, 10677 is the first number to be shown to require over fifty iterations before producing a palindrome: 4668731596684224866951378664 (53 iterations, 28-digits).  \nSurprisingly, there are palindromic numbers that are themselves Lychrel numbers; the first example is 4994.  \nHow many Lychrel numbers are there below ten-thousand?  \nNOTE: Wording was modified slightly on 24 April 2007 to emphasise the theoretical nature of Lychrel numbers."
+
+PE056::usage="A googol (10100) is a massive number: one followed by one-hundred zeros; 100100 is almost unimaginably large: one followed by two-hundred zeros. Despite their size, the sum of the digits in each number is only 1.  \nConsidering natural numbers of the form, ab, where a, b < 100, what is the maximum digital sum?"
 
 Begin["`Private`"]
 
@@ -67,6 +72,25 @@ PE050[]:=Sort[lastPrime[#] & /@ Range[10], #1[[2]] < #2[[2]] &] // Last
 PE052[]:=Select[Range[200000], 
  Length[Union[
      FromDigits[Sort[IntegerDigits[#]]] & /@ (Range[6]*#)]] == 1 &]
+
+
+(* PE053 *)
+PE053[]:=Select[Binomial @@@ 
+   Flatten[Outer[List, Range[100], Range[100]], 1], # > 
+    1000000 &] // Length
+
+
+(* PE055 *)
+LychrelNumberList[num_Integer] := 
+ NestWhileList[# + IntegerReverse[#] &, 
+  If[PalindromeQ[num], 2 num, num], PalindromeQ[#] == False &, 1, 53]
+LychrelQ[num_Integer]:=Length[LychrelNumberList[num]] == 54
+PE055[]:=Select[Range[10000], LychrelQ] // Length
+
+
+(* PE056 *)
+PE056[]:=Max[Total@IntegerDigits[Power @@ #] & /@ 
+  Flatten[Outer[List, Range[100], Range[100]], 1]]
 
 End[]
 
