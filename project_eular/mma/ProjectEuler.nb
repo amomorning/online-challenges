@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    140789,       3368]
-NotebookOptionsPosition[    135110,       3263]
-NotebookOutlinePosition[    135484,       3279]
-CellTagsIndexPosition[    135441,       3276]
+NotebookDataLength[    152780,       3660]
+NotebookOptionsPosition[    146644,       3547]
+NotebookOutlinePosition[    147017,       3563]
+CellTagsIndexPosition[    146974,       3560]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -796,11 +796,11 @@ denominator.\"\>", "InformationUsageText",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -1143,11 +1143,11 @@ can be written as the sum of the most consecutive primes?\"\>",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -1431,11 +1431,11 @@ contain the same digits.\"\>", "InformationUsageText",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -1686,11 +1686,11 @@ distinct, values of (n r) for 1<=n<=100, are greater than one-million?\"\>",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -1985,11 +1985,11 @@ on 24 April 2007 to emphasise the theoretical nature of Lychrel numbers.\"\>",
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
+               ImageSizeCache->{15., {4., 11.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -2906,20 +2906,11 @@ Cell[BoxData[
   "Out[240]=",ExpressionUUID->"e5975e65-fe51-4ab8-9438-caaff7bb6239"]
 }, Open  ]],
 
-Cell[BoxData[
- RowBox[{"Get", "[", 
-  RowBox[{
-   RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<ProjectEuler.m\>\""}], 
-  "]"}]], "Input",
- InitializationCell->True,
- CellLabel->"In[5]:=",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f"],
-
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"?", "PE059"}]], "Input",
- CellChangeTimes->{{3.8425174283488083`*^9, 3.842517431960788*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"daedf537-448b-4f7a-96c7-2e6d6f5aa174"],
+ CellLabel->"In[3]:=",ExpressionUUID->"a35f2230-e826-489e-8202-e6555c0dbbb7"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -3216,8 +3207,8 @@ the original text.", "Documentation" -> None, "OwnValues" ->
     "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
     "Options" -> None, "Attributes" -> {}, "FullName" -> 
     "ProjectEuler`PE059"], False]]], "Output",
- CellChangeTimes->{3.8425174324998193`*^9, 3.84251769211197*^9},
- CellLabel->"Out[7]=",ExpressionUUID->"5d7f610f-41cc-45e4-a898-5a80a61ecc84"]
+ CellChangeTimes->{3.842522700251582*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"e03edcc0-377c-42f8-8645-4d79fa03e439"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3225,8 +3216,7 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Timing", "[", 
   RowBox[{"PE059", "[", "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.8425174352842903`*^9, 3.8425174414196815`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"cbf62cb1-03c9-4559-896e-526d6027554f"],
+ CellLabel->"In[4]:=",ExpressionUUID->"959ffdf4-b72a-494e-b8e6-804b36aa5c5f"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -3256,13 +3246,307 @@ of the circumference of the perimeter of a circle whose diameter is 1. And by \
 similar reasoning I have likewise been able to determine the sums of the \
 subsequent series in which the exponents are even numbers.\"\>"}], "}"}], "[",
      "]"}]}], "}"}]], "Output",
- CellChangeTimes->{3.842517441920534*^9, 3.842517542689879*^9, 
-  3.842517696274572*^9},
- CellLabel->"Out[8]=",ExpressionUUID->"f162d2c1-02f0-407a-91f1-4345ff96ba0e"]
-}, Open  ]]
+ CellChangeTimes->{3.842522703151323*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"5c032f8d-7e66-444e-8b4a-3b37c72baa4c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PE060"}]], "Input",
+ CellChangeTimes->{{3.8425226790847034`*^9, 3.8425226830036955`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"4847dac5-0edc-41f1-8a79-9dfd3a818869"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"The primes 3, 7, 109, and 673, are quite \
+remarkable. By taking any two primes and concatenating them in any order the \
+result will always be prime. For example, taking 7 and 109, both 7109 and \
+1097 are prime. The sum of these four primes, 792, represents the lowest sum \
+for a set of four primes with this property.  \\nFind the lowest sum for a \
+set of five primes for which any two primes concatenate to produce another \
+prime.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Definitions\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Definitions", "Tooltip"]& ], GridBox[{
+                    {
+                    RowBox[{
+                    RowBox[{"PE060", "[", "]"}], ":=", 
+                    RowBox[{"Apply", "[", 
+                    RowBox[{"Plus", ",", 
+                    RowBox[{"FindClique", "[", 
+                    RowBox[{
+                    RowBox[{"Graph", "[", 
+                    RowBox[{"Apply", "[", 
+                    RowBox[{
+                    "UndirectedEdge", ",", "ProjectEuler`Private`primePairs", 
+                    ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "5", "}"}]}], "]"}], ",", 
+                    RowBox[{"{", "1", "}"}]}], "]"}]}]}
+                    },
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"ProjectEuler`PE060\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"The primes 3, 7, 109, and 673, are quite \
+remarkable. By taking any two primes and concatenating them in any order the \
+result will always be prime. For example, taking 7 and 109, both 7109 and \
+1097 are prime. The sum of these four primes, 792, represents the lowest sum \
+for a set of four primes with this property.  \\nFind the lowest sum for a \
+set of five primes for which any two primes concatenate to produce another \
+prime.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{15., {4., 11.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "The primes 3, 7, 109, and 673, are quite remarkable. By taking any two \
+primes and concatenating them in any order the result will always be prime. \
+For example, taking 7 and 109, both 7109 and 1097 are prime. The sum of these \
+four primes, 792, represents the lowest sum for a set of four primes with \
+this property.  \nFind the lowest sum for a set of five primes for which any \
+two primes concatenate to produce another prime.", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, ProjectEuler`PE060, {ProjectEuler`PE060[] :> Apply[Plus, 
+         FindClique[
+          Graph[
+           Apply[UndirectedEdge, ProjectEuler`Private`primePairs, {1}]], {
+          5}], {1}]}], "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "ProjectEuler`PE060"], 
+   False]]], "Output",
+ CellChangeTimes->{3.842522707732687*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"61e3c48c-362d-4952-9dc7-e68cd2283e4f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"PE060", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.842522687220497*^9, 3.8425226964312673`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"35db0e3d-c84e-47c3-9d29-4037ac91e090"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.046875`", ",", 
+   RowBox[{"{", "26033", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.842522710835226*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"3915424c-f4f1-43bf-9fb4-27fd403a9015"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<ProjectEuler.m\>\""}], 
+  "]"}]], "Input",
+ InitializationCell->True,
+ CellLabel->"In[2]:=",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f"]
 },
 WindowSize->{927, 740},
-WindowMargins->{{233, Automatic}, {115, Automatic}},
+WindowMargins->{{Automatic, 275}, {Automatic, 69}},
 Magnification:>1.5 Inherited,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -3292,84 +3576,92 @@ Cell[12308, 311, 192, 3, 43, "Input",ExpressionUUID->"c6b0304e-21fb-4196-8d89-9e
 Cell[12503, 316, 10280, 252, 225, "Output",ExpressionUUID->"6e70f94e-eb6d-4915-b662-2ac864be9ca1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22820, 573, 232, 4, 42, "Input",ExpressionUUID->"29761f78-5625-4943-b103-8a0d82de4189"],
-Cell[23055, 579, 204, 4, 48, "Output",ExpressionUUID->"1872a706-b6e8-41e3-8613-9529ce212e54"]
+Cell[22820, 573, 232, 4, 43, "Input",ExpressionUUID->"29761f78-5625-4943-b103-8a0d82de4189"],
+Cell[23055, 579, 204, 4, 49, "Output",ExpressionUUID->"1872a706-b6e8-41e3-8613-9529ce212e54"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23296, 588, 192, 3, 42, "Input",ExpressionUUID->"3905d752-0d26-47d4-b2b4-99fe1f373f1b"],
-Cell[23491, 593, 11613, 278, 247, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
+Cell[23296, 588, 192, 3, 43, "Input",ExpressionUUID->"3905d752-0d26-47d4-b2b4-99fe1f373f1b"],
+Cell[23491, 593, 11615, 278, 305, "Output",ExpressionUUID->"ea201bb8-11cb-4320-aa61-e0cd453ef4a8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35141, 876, 232, 4, 42, "Input",ExpressionUUID->"1ff63718-2d41-48a6-aa93-90e5846d742d"],
-Cell[35376, 882, 361, 9, 60, "Message",ExpressionUUID->"dd08a57c-e89a-4fc0-bb95-e8e73d7f9898"],
-Cell[35740, 893, 363, 9, 60, "Message",ExpressionUUID->"4d315f40-fd9c-45df-ae8e-bd02825d8aac"],
-Cell[36106, 904, 361, 9, 60, "Message",ExpressionUUID->"5f0d493b-cc13-4373-baa0-df09dacdf847"],
-Cell[36470, 915, 443, 10, 31, "Message",ExpressionUUID->"7c7ebab1-50f1-4246-a685-f502e7d77edc"],
-Cell[36916, 927, 205, 4, 48, "Output",ExpressionUUID->"65f6663a-2b25-4502-adb0-82b7aacfa4ea"]
+Cell[35143, 876, 232, 4, 42, "Input",ExpressionUUID->"1ff63718-2d41-48a6-aa93-90e5846d742d"],
+Cell[35378, 882, 361, 9, 60, "Message",ExpressionUUID->"dd08a57c-e89a-4fc0-bb95-e8e73d7f9898"],
+Cell[35742, 893, 363, 9, 60, "Message",ExpressionUUID->"4d315f40-fd9c-45df-ae8e-bd02825d8aac"],
+Cell[36108, 904, 361, 9, 55, "Message",ExpressionUUID->"5f0d493b-cc13-4373-baa0-df09dacdf847"],
+Cell[36472, 915, 443, 10, 35, "Message",ExpressionUUID->"7c7ebab1-50f1-4246-a685-f502e7d77edc"],
+Cell[36918, 927, 205, 4, 49, "Output",ExpressionUUID->"65f6663a-2b25-4502-adb0-82b7aacfa4ea"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37158, 936, 268, 4, 42, "Input",ExpressionUUID->"10992108-eba3-46d3-972a-5932afff3a3c"],
-Cell[37429, 942, 11134, 266, 283, "Output",ExpressionUUID->"a2efe9b1-6a15-4dcc-80b6-3c3daf41e97f"]
+Cell[37160, 936, 268, 4, 43, "Input",ExpressionUUID->"10992108-eba3-46d3-972a-5932afff3a3c"],
+Cell[37431, 942, 11136, 266, 425, "Output",ExpressionUUID->"a2efe9b1-6a15-4dcc-80b6-3c3daf41e97f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48600, 1213, 287, 5, 42, "Input",ExpressionUUID->"52bdcd5f-cda5-46ae-b5e9-5e170ce943c8"],
-Cell[48890, 1220, 257, 6, 48, "Output",ExpressionUUID->"bc282f4b-1e2a-4a90-9065-982dc8b2d847"]
+Cell[48604, 1213, 287, 5, 43, "Input",ExpressionUUID->"52bdcd5f-cda5-46ae-b5e9-5e170ce943c8"],
+Cell[48894, 1220, 257, 6, 49, "Output",ExpressionUUID->"bc282f4b-1e2a-4a90-9065-982dc8b2d847"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49184, 1231, 195, 3, 42, "Input",ExpressionUUID->"f711aa9f-16a6-40af-b1c0-26c0418d3918"],
-Cell[49382, 1236, 10625, 260, 175, "Output",ExpressionUUID->"cc1e554c-aad6-4606-a551-ea938955eee7"]
+Cell[49188, 1231, 195, 3, 43, "Input",ExpressionUUID->"f711aa9f-16a6-40af-b1c0-26c0418d3918"],
+Cell[49386, 1236, 10627, 260, 225, "Output",ExpressionUUID->"cc1e554c-aad6-4606-a551-ea938955eee7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60044, 1501, 233, 4, 42, "Input",ExpressionUUID->"5f156a7b-aa83-44d2-b70a-185d3e006638"],
-Cell[60280, 1507, 256, 5, 48, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
+Cell[60050, 1501, 233, 4, 43, "Input",ExpressionUUID->"5f156a7b-aa83-44d2-b70a-185d3e006638"],
+Cell[60286, 1507, 256, 5, 49, "Output",ExpressionUUID->"fdee7845-8b18-4ed9-9bfc-e0eae6d97237"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60573, 1517, 196, 3, 42, "Input",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
-Cell[60772, 1522, 9210, 223, 283, "Output",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
+Cell[60579, 1517, 196, 3, 43, "Input",ExpressionUUID->"4caf66e9-695b-4cbf-9453-6745a7675c36"],
+Cell[60778, 1522, 9212, 223, 345, "Output",ExpressionUUID->"474a9cb9-dcb6-42a9-8a90-ee11e2ca2595"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70019, 1750, 335, 6, 42, "Input",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
-Cell[70357, 1758, 205, 4, 48, "Output",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
+Cell[70027, 1750, 335, 6, 43, "Input",ExpressionUUID->"d71e55fe-4385-40c5-873c-ca5be65018de"],
+Cell[70365, 1758, 205, 4, 49, "Output",ExpressionUUID->"4f6446ae-c8ee-4732-a6b5-2907cd31965b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70599, 1767, 242, 4, 42, "Input",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
-Cell[70844, 1773, 13467, 289, 751, "Output",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
+Cell[70607, 1767, 242, 4, 43, "Input",ExpressionUUID->"ff81b5dc-9a6c-4683-903d-9a43564d4152"],
+Cell[70852, 1773, 13469, 289, 1025, "Output",ExpressionUUID->"373ea8f9-8cec-4d07-8753-ecdb86ecbd96"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84348, 2067, 232, 4, 42, "Input",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
-Cell[84583, 2073, 203, 4, 48, "Output",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
+Cell[84358, 2067, 232, 4, 43, "Input",ExpressionUUID->"84e1d202-f44a-490e-8ff2-1aad66d7fd32"],
+Cell[84593, 2073, 203, 4, 49, "Output",ExpressionUUID->"50817430-6e32-460f-aea8-b302134161f1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84823, 2082, 283, 5, 72, "Input",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
-Cell[85109, 2089, 10790, 262, 305, "Output",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
-Cell[95902, 2353, 203, 4, 49, "Output",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
+Cell[84833, 2082, 283, 5, 73, "Input",ExpressionUUID->"114b8553-8033-4639-b90a-2995c919ae78"],
+Cell[85119, 2089, 10790, 262, 305, "Output",ExpressionUUID->"97e4efc9-0384-4d66-88d6-40898cc241ba"],
+Cell[95912, 2353, 203, 4, 49, "Output",ExpressionUUID->"b4696b5f-5845-4e53-bc41-bec1b3bc3ce1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[96142, 2362, 194, 3, 43, "Input",ExpressionUUID->"0898ab12-0902-47bc-81cc-3a598ffc28a2"],
-Cell[96339, 2367, 8378, 212, 195, "Output",ExpressionUUID->"0d6f4f72-13b7-4533-91ce-0f308e2e0fbf"]
+Cell[96152, 2362, 194, 3, 43, "Input",ExpressionUUID->"0898ab12-0902-47bc-81cc-3a598ffc28a2"],
+Cell[96349, 2367, 8378, 212, 195, "Output",ExpressionUUID->"0d6f4f72-13b7-4533-91ce-0f308e2e0fbf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[104754, 2584, 327, 6, 43, "Input",ExpressionUUID->"17414c78-cdab-4c46-9092-400e5fe4efaf"],
-Cell[105084, 2592, 301, 6, 49, "Output",ExpressionUUID->"4890cea9-298c-480d-ab15-feb8322875aa"]
+Cell[104764, 2584, 327, 6, 43, "Input",ExpressionUUID->"17414c78-cdab-4c46-9092-400e5fe4efaf"],
+Cell[105094, 2592, 301, 6, 49, "Output",ExpressionUUID->"4890cea9-298c-480d-ab15-feb8322875aa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[105422, 2603, 194, 3, 43, "Input",ExpressionUUID->"6f18d2d9-bb55-4634-a9de-02357d7bf5ee"],
-Cell[105619, 2608, 12161, 276, 745, "Output",ExpressionUUID->"65176ad1-cad7-4b1f-aa36-ba3a70928ea3"]
+Cell[105432, 2603, 194, 3, 43, "Input",ExpressionUUID->"6f18d2d9-bb55-4634-a9de-02357d7bf5ee"],
+Cell[105629, 2608, 12161, 276, 745, "Output",ExpressionUUID->"65176ad1-cad7-4b1f-aa36-ba3a70928ea3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[117817, 2889, 239, 5, 43, "Input",ExpressionUUID->"91c80962-7083-4f2e-8e1e-7399970f6d75"],
-Cell[118059, 2896, 331, 9, 49, "Output",ExpressionUUID->"e5975e65-fe51-4ab8-9438-caaff7bb6239"]
-}, Open  ]],
-Cell[118405, 2908, 249, 6, 67, "Input",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f",
- InitializationCell->True],
-Cell[CellGroupData[{
-Cell[118679, 2918, 194, 3, 43, "Input",ExpressionUUID->"daedf537-448b-4f7a-96c7-2e6d6f5aa174"],
-Cell[118876, 2923, 14098, 296, 905, "Output",ExpressionUUID->"5d7f610f-41cc-45e4-a898-5a80a61ecc84"]
+Cell[117827, 2889, 239, 5, 43, "Input",ExpressionUUID->"91c80962-7083-4f2e-8e1e-7399970f6d75"],
+Cell[118069, 2896, 331, 9, 49, "Output",ExpressionUUID->"e5975e65-fe51-4ab8-9438-caaff7bb6239"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[133011, 3224, 234, 4, 43, "Input",ExpressionUUID->"cbf62cb1-03c9-4559-896e-526d6027554f"],
-Cell[133248, 3230, 1846, 30, 804, "Output",ExpressionUUID->"f162d2c1-02f0-407a-91f1-4345ff96ba0e"]
-}, Open  ]]
+Cell[118437, 2910, 126, 2, 43, "Input",ExpressionUUID->"a35f2230-e826-489e-8202-e6555c0dbbb7"],
+Cell[118566, 2914, 14075, 296, 905, "Output",ExpressionUUID->"e03edcc0-377c-42f8-8645-4d79fa03e439"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[132678, 3215, 164, 3, 43, "Input",ExpressionUUID->"959ffdf4-b72a-494e-b8e6-804b36aa5c5f"],
+Cell[132845, 3220, 1799, 29, 804, "Output",ExpressionUUID->"5c032f8d-7e66-444e-8b4a-3b37c72baa4c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134681, 3254, 196, 3, 43, "Input",ExpressionUUID->"4847dac5-0edc-41f1-8a79-9dfd3a818869"],
+Cell[134880, 3259, 10995, 261, 345, "Output",ExpressionUUID->"61e3c48c-362d-4952-9dc7-e68cd2283e4f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145912, 3525, 232, 4, 43, "Input",ExpressionUUID->"35db0e3d-c84e-47c3-9d29-4037ac91e090"],
+Cell[146147, 3531, 229, 5, 49, "Output",ExpressionUUID->"3915424c-f4f1-43bf-9fb4-27fd403a9015"]
+}, Open  ]],
+Cell[146391, 3539, 249, 6, 67, "Input",ExpressionUUID->"38ab78a9-27b5-433c-8835-2ce431d6ec6f",
+ InitializationCell->True]
 }
 ]
 *)
