@@ -37,6 +37,12 @@ PE060::usage="The primes 3, 7, 109, and 673, are quite remarkable. By taking any
 
 PE061::usage="https://projecteuler.net/problem=61\nFind the sum of the only ordered set of six cyclic 4-digit numbers for which each polygonal type: triangle, square, pentagonal, hexagonal, heptagonal, and octagonal, is represented by a different number in the set."
 
+PE062::usage="The cube, 41063625 (345^3), can be permuted to produce two other cubes: 56623104 (384^3) and 66430125 (405^3). In fact, 41063625 is the smallest cube which has exactly three permutations of its digits which are also cube.  \nFind the smallest cube for which exactly five permutations of its digits are cube."
+
+PE063::usage="The 5-digit number, 16807=7^5, is also a fifth power. Similarly, the 9-digit number, 134217728=8^9, is a ninth power.  \nHow many n-digit positive integers exist which are also an nth power?"
+
+PE064::usage="https://projecteuler.net/problem=64\n"
+
 Begin["`Private`"]
 
 (* PE033 *)
@@ -157,6 +163,22 @@ cyclicalPolygonalQ[list_] :=
 PE061[]:=Total@FoldList[cyclicalPairQ, polygonalNumbers[[1]], 
    First[Select[Flatten[{#, 1, #}] & /@ Permutations[Range[2, 6]], 
      cyclicalPolygonalQ]]][[-6 ;; -1]]
+
+
+(* PE062 *)
+PE062[]:=Min @@ Select[GatherBy[Range[10000]^3, Sort@IntegerDigits@# &], 
+  Length@# == 5 &]
+
+
+(* PE063 *)
+PE063[]:=Table[Select[
+    Table[Power[x, y] -> Length[IntegerDigits[Power[x, y]]], {x, 1, 
+      50}], #[[2]] == y &], {y, 1, 50}] // Flatten // Length
+
+
+(* PE064 *)
+PE064[]:=Count[Length@Level[ContinuedFraction@Sqrt[#], {2}] & /@ 
+  Range[10000], _?OddQ]
 
 End[]
 
