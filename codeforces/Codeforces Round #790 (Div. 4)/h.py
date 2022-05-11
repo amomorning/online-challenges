@@ -34,14 +34,15 @@ class Fenwick:
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
+    a.reverse()
 
     fenwick = Fenwick(n)
     res = 0
     for i, x in enumerate(a):
         res += fenwick.sum(x)
         fenwick.add(x, 1)
-        printf(res)
-    # printf(res)
+        # printf(res)
+    printf(res)
 
 
         

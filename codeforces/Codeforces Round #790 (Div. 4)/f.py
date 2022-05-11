@@ -14,18 +14,19 @@ def printf(a):
 for _ in range(int(input())):
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
-
-    mp = {}
-    for i in range(n):
-        if a[i] in mp:
-            mp[a[i]] += 1
-        else:
-            mp[a[i]] = 1
+    a = sorted(a)
+    a.append(-1)
 
     l = []
-    for i in mp:
-        if(mp[i] >= k):
-            l.append(i)
+    cnt = 1
+    for i in range(1, n+1):
+        if(a[i] != a[i-1]):
+            if(cnt >= k):
+                l.append(a[i-1])
+            cnt = 0
+        cnt += 1
+
+    # printf(l)
 
     if(len(l) == 0):
         print(-1)
