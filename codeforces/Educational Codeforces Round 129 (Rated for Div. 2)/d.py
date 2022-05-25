@@ -11,7 +11,7 @@ def printf(a):
     else:
         print(a)
 
-from heapq import *
+from collections import deque
 
 def getdigits(x):
     return list(map(int, list(str(x))))
@@ -22,8 +22,8 @@ def solve():
 
     target = 10**(n-1)
 
-    q = [(x, 0)]
-    f, e = 0, len(q)-1
+    q = deque()
+    q.append((x, 0))
     vis = {}
 
     if x >= target*10:
@@ -31,24 +31,21 @@ def solve():
         return 
 
 
-    while f <= e:
+    while q:
         # printf(q)
-        u, step = q[f]
-        f += 1
+        u, step = q.popleft()
         
         ds = getdigits(u)
         
         for d in range(9, 1, -1):
             if d in ds:
-                if d * u >= target:
+                if d*u >= target:
                     printf(step+1)
                     return
-                try:
-                    v = vis[d*u]
-                except KeyError:
+                
+                if d*u not in vis:
                     vis[d*u] = 1
                     q.append((d*u, step+1))
-                    e += 1
     
     printf(-1)
     return
