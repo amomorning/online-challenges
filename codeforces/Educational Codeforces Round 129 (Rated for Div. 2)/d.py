@@ -11,52 +11,46 @@ def printf(a):
     else:
         print(a)
 
+from heapq import *
 
-n, x = map(int, input().split())
-cnt = 0
+def getdigits(x):
+    return list(map(int, list(str(x))))
 
-def calclen(x):
-    a = list(str(x))
-    mx = int(max(a))
-    return len(str(x * mx))
 
-def solve(n, x):
-    global cnt
+def solve():
+    n, x = map(int, input().split())
 
+    target = 10**(n-1)
+
+    q = [(x, 0)]
+    f, e = 0, len(q)-1
+    vis = {}
+
+    if x >= target*10:
+        printf(-1)
+        return 
+
+
+    while f <= e:
+        # printf(q)
+        u, step = q[f]
+        f += 1
+        
+        ds = getdigits(u)
+        
+        for d in range(9, 1, -1):
+            if d in ds:
+                if d * u >= target:
+                    printf(step+1)
+                    return
+                try:
+                    v = vis[d*u]
+                except KeyError:
+                    vis[d*u] = 1
+                    q.append((d*u, step+1))
+                    e += 1
     
-    a = list(str(x))
-    mxlen = len(a)
-    sa = set(a)
-    if len(sa) == 1 and a[0] == '1' and n > mxlen:
-        return False
-    
-    if mxlen > n:
-        return False
+    printf(-1)
+    return
 
-    candidates = [x]
-    mxnextlen = mxlen
-
-    while mxlen < n:
-        # printf(len(candidates))
-        for c in candidates:
-            a = list(str(c))
-            for i in range(2, 10):
-                if str(i) in a:
-                    mxnextlen = max(mxnextlen, calclen(c * i))
-                    mxlen = max(mxlen, len(str(c * i)))
-
-        newcand = []
-        for c in candidates:
-            a = list(str(c))
-            for i in range(2, 10):
-                if str(i) in a and (len(str(c * i)) == mxlen or calclen(c * i) == mxnextlen):
-                    newcand.append(i*c)
-
-
-        # printf(newcand)
-        candidates = newcand
-        cnt += 1
-
-    return True
-
-printf(cnt) if solve(n, x) else printf(-1)
+solve()
