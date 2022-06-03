@@ -1,7 +1,6 @@
-import sys;input=lambda:sys.stdin.readline().strip("\r\n")
-import platform
-LOCAL = (platform.uname().node == 'AMO')
-# print(LOCAL)
+import sys; input = lambda:sys.stdin.readline().strip("\r\n")
+import platform; LOCAL = (platform.uname().node == 'AMO')
+
 def printf(a):
     if LOCAL:
         print('>>>:', end=' ')
@@ -11,6 +10,7 @@ def printf(a):
     else:
         print(a)
 
+
 class SparseTable:
     def __init__(self, a, select=min):
         n = len(a); L = 1
@@ -19,20 +19,19 @@ class SparseTable:
         self.lg = [-1] * (n + 1)
         self.u = [[0] * (L+1) for _ in range(n)]
         self.select = select
+
         for i in range(n):
             self.u[i][0] = a[i]
         for i in range(1, n + 1):
             self.lg[i] = self.lg[i >> 1] + 1
         for j in range(1, L):
             for i in range(n-(1<<j)+1):
-                # printf([i, j, i, j-1, i + (1 << (j - 1)), j-1])
                 self.u[i][j] = self.select(self.u[i][j - 1], self.u[i + (1 << (j - 1))][j - 1])
         
-        # printf(self.u)
-
     def ask(self, a, b):
         k = self.lg[b-a+1]
         return self.select(self.u[a][k], self.u[b - (1 << k) + 1][k])
+
 
 
 for _ in range(int(input())):
@@ -53,12 +52,12 @@ for _ in range(int(input())):
 
     for i in range(n):
         left[i] = i
-        while left[i] > 0 and a[left[i]-1] < a[i]:
+        while left[i] > 0 and a[left[i]-1] <= a[i]:
             left[i] = left[left[i]-1]
     
     for i in range(n-1, -1, -1):
         right[i] = i
-        while right[i] < n-1 and a[right[i] + 1] < a[i]:
+        while right[i] < n-1 and a[right[i] + 1] <= a[i]:
             right[i] = right[right[i]+1]
 
     flag = True
