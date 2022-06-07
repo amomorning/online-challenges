@@ -2,24 +2,22 @@ import sys; input = lambda:sys.stdin.readline().strip("\r\n")
 
 class SparseTable:
     def __init__(self, a, select=min):
-        n = len(a); L = 1
-        while (1 << L) <= n: L += 1
+        N = len(a); 
+        L = N.bit_length()
 
-        self.lg = [-1] * (n + 1)
-        self.u = [[0] * (L+1) for _ in range(n)]
+        self.u = [[0] * N for _ in range(L)]
         self.select = select
 
-        for i in range(n):
-            self.u[i][0] = a[i]
-        for i in range(1, n + 1):
-            self.lg[i] = self.lg[i >> 1] + 1
-        for j in range(1, L):
-            for i in range(n-(1<<j)+1):
-                self.u[i][j] = self.select(self.u[i][j - 1], self.u[i + (1 << (j - 1))][j - 1])
+        for i in range(N):
+            self.u[0][i] = a[i]
+        for i in range(1, L):
+            for j in range(N-(1<<i)+1):
+                self.u[i][j] = self.select(self.u[i-1][j], self.u[i-1][j+(1<<(i-1))])
         
-    def ask(self, a, b):
-        k = self.lg[b-a+1]
-        return self.select(self.u[a][k], self.u[b - (1 << k) + 1][k])
+    def ask(self, l, r):
+        i = (r - l).bit_length()-1
+        return self.select(self.u[i][l], self.u[i][r-(1<<i)+1])
+
 
 import math
 n, q = map(int, input().split())
