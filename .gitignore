@@ -1,3 +1,7 @@
+*
+!*.*
+!*/
+
 .vscode
 *.exe
 *wa.cpp
@@ -7,3 +11,4 @@
 .gitignore
 
 test.py
+.DS_Store
