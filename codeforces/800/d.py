@@ -1,4 +1,6 @@
 import collections, math, bisect, heapq, random, functools, itertools, copy, typing
+import platform; LOCAL = (platform.uname().node == 'AMO')
+
 # Fast IO Region
 import os, sys; from io import BytesIO, IOBase
 BUFSIZE = 8192
@@ -52,8 +54,6 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
-import platform; LOCAL = (platform.uname().node == 'AMO')
-
 def debug(*args):
     if LOCAL:
         print('\033[92m', end='')
@@ -72,24 +72,33 @@ def printf(*args):
             print(arg, end=' ')
     print()
 
+
+
 for _ in range(int(input())):
     n = int(input())
-    a = list(map(int, input().split()))
+    p = list(map(lambda x: int(x)-1, input().split()))
 
-    flag = True
-    now = n-1
-
-    while now > 0 and a[now] == 0:
-        now -= 1
-    
-    cur = 0
-    for i in range(now, 0, -1):
-        cur += a[i]
-        if cur >= 0:
-            flag = False
-        debug(cur)
-    cur += a[0]
-    if cur != 0:
-        flag = False
+    l, r = [], []
+    for i in range(n):
+        a, b = map(int, input().split())
+        l.append(a)
+        r.append(b)
         
-    printf("YES") if flag == True else printf("NO")
+    g = [[] for _ in range(n)]
+    for i, x in enumerate(p):
+        g[x].append(i+1)
+        
+    a = [0] * n
+    ans = 0
+
+    for u in range(n-1, -1, -1):
+
+        for v in g[u]:
+            a[u] += a[v]
+        
+        a[u] = min(a[u], r[u])
+        if a[u] < l[u]: 
+            ans += 1
+            a[u] = r[u]
+        
+    print(ans)
