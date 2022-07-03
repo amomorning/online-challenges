@@ -1,6 +1,8 @@
-from bisect import bisect_left
-
-a = list(range(0, 5)) + list(range(6, 10))
-
-b = bisect_left(a, 100)
-print(b)
+import random
+n = 100
+print(n)
+for i in range(n):
+    s = ''
+    for j in range(n):
+        s += str(random.randint(0, 1))
+    print(s)
