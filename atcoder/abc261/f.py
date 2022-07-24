@@ -57,6 +57,17 @@ class Fenwick:
         return -1 if p+1 >= self.n else p + 1
 
 
+from bisect import bisect_left
+def discretization(arr:list) -> list:
+    ret = []
+    idx = sorted(set(arr))
+    for a in arr:
+        x = bisect_left(idx, a)
+        ret.append(x)
+    return ret
+
+    
+
 n = int(input())
 c = list(map(int, input().split()))
 x = list(map(lambda x: int(x)-1, input().split()))
@@ -74,14 +85,7 @@ for i in mp.keys():
     m = len(mp[i])
     fen = Fenwick(m)
     tot = 0
-    idx = sorted(set(mp[i]))
-    mmp = Encodict(lambda: 0)
-    for j, v in enumerate(idx):
-        mmp[v] = j
-    ls = []
-    for j in range(m):
-        ls.append(mmp[mp[i][j]])
-        
+    ls = discretization(mp[i])
     # print(ls) 
 
     for j in range(m-1, -1, -1):
