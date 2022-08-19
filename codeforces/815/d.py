@@ -53,37 +53,16 @@ class Encodict:
             self.dict = dict(sorted(self.dict.items(), \
                 key=lambda x:self.RANDOM^x[0], reverse=reverse))
 
-MAXN = 201
 for _ in range(int(input())):
     n = int(input())
     a = inp()
-    mp = Encodict(list)
-    for i, x in enumerate(a):
-        mp[x].append(i)
 
-    edges = []
-    for ai in mp.keys():
-        for aj in mp.keys():
-            for p in range(len(mp[ai])-1, -1, -1):
-                q = len(mp[aj]) - 1
-                i = mp[ai][p]
-                if mp[aj][q] < mp[ai][p]: continue
-                while q > 0 and mp[aj][q-1] > i: 
-                    q -= 1
-                for qq in range(q, len(mp[aj])):
-                    j = mp[aj][qq]
-                    if ai ^ j < aj ^ i:
-                        edges.append((i, j))
+    dp = [1] * n
+    for i in range(n):
+        for j in range(max(i-255, 0), i):
+            if a[i] ^ j > a[j] ^ i:
+                dp[i] = max(dp[i], dp[j]+1)
 
-    # print(edges)
-    edges = sorted(edges, key=lambda x: x[1])
-    # print(edges)
-    edges.reverse()
-    dp = [1] * MAXN
-    for u, v in edges:
-        dp[u] = max(dp[u], dp[v]+1)
-    
-    
     print(max(dp))
 
     
