@@ -4,10 +4,8 @@
 
 .vscode
 *.exe
-*wa.cpp
-*tle.py
-*wa.py
 .vs
+*.in
 
 test*
 .DS_Store
