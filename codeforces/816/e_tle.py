@@ -897,6 +897,8 @@ def dijkstra(starts):
 
     while q:
         du, u = heapq.heappop(q)
+        if d[u] < du:
+            continue
         # debug(du, u)
         for v, w in G[u]:
             if d[v] > d[u] + w:
