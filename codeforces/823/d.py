@@ -23,14 +23,7 @@ def printf(*args):
             print(arg, end=' ')
     print()
 
-def equals(a, b):
-    if a[0] == b[0] and a[1] == b[1]:
-        return True
-    if a[0] == b[1] and a[1] == b[0]:
-        return True
-    return False
-
-for _ in range(int(input())):
+def solve():
     n = int(input())
     s = input()
     t = input()
@@ -43,13 +36,17 @@ for _ in range(int(input())):
         else:
             mp[(x, y)] = 1
     
-    odd, sym = 0, 0
-    for x, y in mp.keys():
-        if mp[(x, y)] % 2 == 1:
-            odd += 1
-            if x == y: sym += 1
-    debug(odd, sym)
-    if odd == sym and n % 2 == sym:
+    odd = 0
+    for v, x in mp.items():
+        if x % 2 and v[0] != v[1]:
+            print("NO")
+            return
+        odd += x % 2
+
+    if odd <= 1:
         print("YES")
     else: print("NO")
     
+
+for _ in range(int(input())):
+    solve()
