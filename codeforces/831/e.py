@@ -25,26 +25,14 @@ def printf(*args):
 def solve(cas):
     n = int(input())
     p = [-1] + inp(lambda x: int(x)-1)
-    a = [-1] * n
-    for i in range(n):
-        a[i] = n-1-i
-    debug(a)
-    ans = []
+    a, dp = [1] * n, [0] * n
     for i in range(n-1, -1, -1):
-        if p[i] != -1 and a[p[i]] > a[i]:
-            a[p[i]] = a[i]
-        ans.append(a[i])
+        dp[i] = max(dp[i], a[i])
+        if i:
+            dp[p[i]] += dp[i]
+            a[p[i]] = max(a[p[i]], a[i]+1)
     
-    debug(ans)
-    cnt = 1
-    dp = [0] * n
-    for i in range(1, n):
-        if ans[i] >= tot[-1]:
-        if ans[i] >= ans[i-1]:
-            cnt += 1
-        else:
-            break
-    print(cnt)
+    print(dp[0])
 
 
 
