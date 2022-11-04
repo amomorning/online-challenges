@@ -2,7 +2,8 @@ import collections, math, bisect, heapq, random, functools, itertools, copy, typ
 import platform; LOCAL = (platform.uname().node == 'AMO')
 
 
-inp = lambda : list(map(int, input().split()))
+import sys; input = lambda: sys.stdin.readline().rstrip("\r\n")
+inp = lambda f=int: list(map(f, input().split()))
 
 def debug(*args):
     if LOCAL:
@@ -24,19 +25,18 @@ def printf(*args):
 
 def solve(cas):
     n, = inp()
-    tiles = [sorted(inp(), reverse=True) for _ in range(n)]
-    if n == 1: return 2 * sum(tiles[0])
+    a = inp()
+    mna = min(a)
+    if a[0] == mna:
+        print('Bob')
+    else: print('Alice')
 
-    tiles = sorted(tiles, key=lambda x:x[0])
-    ans = 0
-    last_a = math.inf
-    for a, b in tiles:
-        if ans > 0:
-            ans -= min(last_a, a) * 2
-        ans += (a + b) * 2
-        last_a = a
-    print(ans)
-    
+
+def make_arr(*args):
+    def func(x):
+        if len(args) == 1: return [x for _ in range(args[0])]
+        return [make_arr(*args[1:])(x) for _ in range(args[0])]
+    return func
 
 cas = 1
 cas = int(input())
