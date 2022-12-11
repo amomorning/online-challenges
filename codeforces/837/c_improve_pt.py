@@ -1,3 +1,6 @@
+# sometimes u need to submit code on pypy3 rather than pypy3-64
+# see https://codeforces.com/contest/1771/submission/184823039 (Accepted)
+# and https://codeforces.com/contest/1771/submission/184823012 (TLE test3)
 import collections, math, bisect, heapq, random, functools, itertools, copy, typing
 import platform; LOCAL = (platform.uname().node == 'AMO')
 
@@ -99,65 +102,26 @@ class PrimeTable:
                     factors.append(d * (p ** j))
         return factors
 
-class MillerRabin:
-    @classmethod
-    def pow_mod(self, a, b, mod):
-        ans = 1
-        while b:
-            if b & 1: ans = ans * a % mod
-            a = a * a % mod; b >>= 1
-        return ans
 
-    @classmethod
-    def is_prime(self, n:int):
-        if n <= 1: return False
-        return not self.miller_rabin(n)
-
-    @classmethod
-    def miller_rabin(self, n:int):
-        x, t = n-1, 0
-        while ~x & 1: 
-            x >>= 1 
-            t += 1
-
-        flag = True
-        if t >= 1 and x & 1:
-            cs = [2, 325, 9375, 28178, 450775, 9780504, 1795265022]
-            for a in cs:
-                if self.check_prime(a, n, x, t):
-                    flag = True
-                    break
-                flag = False
-        if not flag or n == 2: return False
-        return True
-
-    @classmethod
-    def check_prime(self, a, n, x, t):
-        ret = self.pow_mod(a, x, n)
-        last = ret
-        for i in range(1, t+1):
-            ret = self.pow_mod(ret, 2, n)
-            if ret == 1 and last != 1 and last != n-1:
-                return True
-            last = ret
-        if ret != 1: return True
-        return False
-
-
-pt = PrimeTable(1000000)
-debug(len(pt.primes))
+pt = PrimeTable(32000)
 def solve(cas):
     n, = inp()
     a = inp()
-    # l = []
-    mp = {}
+    mp = set()
     for x in a:
-        for p, b in pt.prime_factorization(x):
-            if p in mp:
+        for p in pt.primes:
+            if x % p == 0:
+                if p in mp:
+                    print("YES")
+                    return
+                mp.add(p)
+                while x % p == 0:
+                    x = x // p
+        if x > 1:
+            if x in mp:
                 print("YES")
                 return
-            mp[p] = 1
-            # l.append(p)
+            mp.add(x)
     print("NO")
 
 cas = 1

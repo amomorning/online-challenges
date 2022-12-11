@@ -1,6 +1,7 @@
 import collections, math, bisect, heapq, random, functools, itertools, copy, typing
 import platform; LOCAL = (platform.uname().node == 'AMO')
 
+
 import sys; input = lambda: sys.stdin.readline().rstrip("\r\n")
 inp = lambda f=int: list(map(f, input().split()))
 
@@ -27,7 +28,6 @@ def printf(*args):
         else:
             print(arg, end=' ')
     print()
-
 
 import math
 class PrimeTable:
@@ -67,7 +67,16 @@ class PrimeTable:
         return True
     
     def prime_factorization(self, x:int):
-        for p in range(2, int(math.sqrt(x))+1):
+        for p in self.primes:
+            if p * p > x: break
+            if x < len(self.min_div): break
+            if x % p == 0:
+                cnt = 0
+                while x % p == 0: 
+                    cnt += 1
+                    x //= p
+                yield p, cnt
+        for p in range(len(self.min_div), int(math.sqrt(x))+1):
             if x <= self.n: break
             if x % p == 0:
                 cnt = 0
@@ -90,24 +99,20 @@ class PrimeTable:
                     factors.append(d * (p ** j))
         return factors
 
-pt = PrimeTable(500000)
-
 class MillerRabin:
-    @classmethod
-    def pow_mod(self, a, b, mod):
+    def pow_mod(a, b, mod):
         ans = 1
         while b:
             if b & 1: ans = ans * a % mod
             a = a * a % mod; b >>= 1
         return ans
 
-    @classmethod
-    def is_prime(self, n:int):
+    @staticmethod
+    def is_prime(n:int):
         if n <= 1: return False
-        return not self.miller_rabin(n)
+        return not MillerRabin.miller_rabin(n)
 
-    @classmethod
-    def miller_rabin(self, n:int):
+    def miller_rabin(n:int):
         x, t = n-1, 0
         while ~x & 1: 
             x >>= 1 
@@ -117,68 +122,42 @@ class MillerRabin:
         if t >= 1 and x & 1:
             cs = [2, 325, 9375, 28178, 450775, 9780504, 1795265022]
             for a in cs:
-                if self.check_prime(a, n, x, t):
+                if MillerRabin.check_prime(a, n, x, t):
                     flag = True
                     break
                 flag = False
         if not flag or n == 2: return False
         return True
 
-    @classmethod
-    def check_prime(self, a, n, x, t):
-        ret = self.pow_mod(a, x, n)
+    def check_prime(a, n, x, t):
+        ret = MillerRabin.pow_mod(a, x, n)
         last = ret
         for i in range(1, t+1):
-            ret = self.pow_mod(ret, 2, n)
+            ret = MillerRabin.pow_mod(ret, 2, n)
             if ret == 1 and last != 1 and last != n-1:
                 return True
             last = ret
         if ret != 1: return True
         return False
 
-
+pt = PrimeTable(32000)
 def solve(cas):
     n, = inp()
-    a = sorted(inp(), reverse=True)
-    
-    debug(a)
+    a = inp()
     mp = {}
-    MAGIC = 400
-    if n < MAGIC:
-        for i in range(n):
-            for j in range(i):
-                if math.gcd(a[i], a[j]) != 1:
-                    print("YES")
-                    return 
-        print("NO")
-        return
-    else:
-        for p in pt.primes:
-            if p >= MAGIC: break
-            cnt = 0
-            for x in a:
-                if x % p == 0:
-                    cnt += 1
-                    while x % p == 0: x //= p
-            if cnt > 1:
+    for x in a:
+        if MillerRabin.is_prime(x):
+            if x in mp:
                 print("YES")
                 return
-        for x in a:
-            if MillerRabin.is_prime(x):
-                if x in mp:
-                    print("YES")
-                    return
-                mp[x] = 1
-                continue
-            for p, b in pt.prime_factorization(x):
-                # print(p, b)
-                if p in mp:
-                    print("YES")
-                    # print(x, mp)
-                    return
-                else:
-                    mp[p] = 1
-        print("NO")
+            mp[x] = 1
+            continue
+        for p, b in pt.prime_factorization(x):
+            if p in mp:
+                print("YES")
+                return
+            mp[p] = 1
+    print("NO")
 
 cas = 1
 cas = int(input())
