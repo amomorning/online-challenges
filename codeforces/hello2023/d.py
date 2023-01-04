@@ -86,15 +86,13 @@ class UnionFind:
         ux, uy = self.find(x), self.find(y)
         if ux == uy:
             return False
-        self.uf[uy] = ux
+        if self.uf[ux] >= self.uf[uy]:
+            self.uf[uy] += self.uf[ux]
+            self.uf[ux] = uy
+        else:
+            self.uf[ux] += self.uf[uy]
+            self.uf[uy] = ux
         return True
-        # if self.uf[ux] >= self.uf[uy]:
-        #     self.uf[uy] += self.uf[ux]
-        #     self.uf[ux] = uy
-        # else:
-        #     self.uf[ux] += self.uf[uy]
-        #     self.uf[uy] = ux
-        # return True
  
     def count(self):
         return sum(f < 0 for f in self.uf)
@@ -131,51 +129,33 @@ def solve(cas):
     n, = inp()
     a, b = inp(), inp()
     m, = inp()
-    x = group(sorted(inp()))
+    cnt = Encodict(lambda:0)
+    for x in inp():
+        cnt[x] += 1
             
+    dsu = UnionFind(n)
     mp = Encodict(list)
-    uf = UnionFind(n)
     for i in range(n):
         if a[i] < b[i]:
             print("NO")
             return
         mp[b[i]].append(i)
-    
-    mark = Encodict(lambda : 0)
-    
-    for xx, num in x:
-        cur = set()
-        for p in mp[xx]:
-            if p > 0 and b[p-1] <= b[p]:
-                uf.union(p-1, p)
-            if p+1 < n and b[p+1] <= b[p]:
-                uf.union(p, p+1)
-            cur.add(uf.find(p))
-        debug('cur =', cur, 'x =', xx)
-        if len(cur) > num:
+    mp.sorted()
+
+    for x in mp.keys():
+        for u in mp[x]:
+            if u > 0 and b[u-1] <= b[u]: dsu.union(u-1, u)
+            if u + 1 < n and b[u+1] <= b[u]: dsu.union(u, u+1)
+        need = set()
+        for u in mp[x]:
+            if a[u] == b[u]: continue
+            need.add(dsu.find(u))
+        # debug('(', need, ')', x, cnt[x])
+        if len(need) > cnt[x]:
             print("NO")
             return
-        mark[xx] = 1
     
-    for i in range(n):
-        if mark[b[i]] == 1: continue
-        if b[i] != a[i]:
-            print("NO")
-            return
-   
-    debug('-------------')
     print("YES")
-
-
-        
-
-                
-
-        
-
-        
-    
-    
 
 
 cas = 1
