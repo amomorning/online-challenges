@@ -1,75 +1,103 @@
-import itertools, random
-class Encodict:
-    def __init__(self, func=lambda : 0):
-        self.RANDOM = random.randint(0, 1<<32)
-        self.default = func
-        self.dict = {}
-    
-    def __getitem__(self, key):
-        k = self.RANDOM ^ key
-        if k not in self.dict:
-            self.dict[k] = self.default()
-        return self.dict[k]
-    
-    def __setitem__(self, key, item):
-        k = self.RANDOM ^ key
-        self.dict[k] = item
+import collections, math, bisect, heapq, random, functools, itertools, copy, typing
+import platform; LOCAL = (platform.uname().node == 'AMO')
 
-    def keys(self):
-        return [self.RANDOM ^ i for i in self.dict]
-    
-    def items(self):
-        return [(self.RANDOM ^ i, self.dict[i]) for i in self.dict]
-    
-    def sorted(self, by_value=False, reverse=False):
-        if by_value:
-            self.dict = dict(sorted(self.dict.items(), \
-                key=lambda x:x[1], reverse=reverse))
+
+import sys; input = lambda: sys.stdin.readline().rstrip("\r\n")
+inp = lambda f=int: list(map(f, input().split()))
+
+def make_arr(*args):
+    def func(x):
+        if len(args) == 1: return [x for _ in range(args[0])]
+        return [make_arr(*args[1:])(x) for _ in range(args[0])]
+    return func
+
+def debug(*args):
+    if LOCAL:
+        print('\033[92m', end='')
+        printf(*args)
+        print('\033[0m', end='')
+
+def printf(*args):
+    if LOCAL:
+        print('>>>: ', end='')
+    for arg in args:
+        if isinstance(arg, typing.Iterable) and \
+                not isinstance(arg, str) and \
+                not isinstance(arg, dict):
+            print(' '.join(map(str, arg)), end=' ')
         else:
-            self.dict = dict(sorted(self.dict.items(), \
-                key=lambda x:self.RANDOM^x[0], reverse=reverse))
+            print(arg, end=' ')
+    print()
 
-def sort_left(arr):
-    n = 2 * len(arr) // 3
-    return list(sorted(arr[:n])) + arr[n:]
+MOD = 998244353
+def crange(start, end, step=1):
+    dir = 1 if start < end else -1
+    if start > end and step > 0: step = -step
+    return range(start, end + dir, step)
 
-def sort_right(arr):
-    n = len(arr) // 3
-    return arr[:n] + list(sorted(arr[n:]))
+def norm(v):
+    v = v % MOD
+    if v < 0: v += MOD
+    return v
 
-def is_sorted(arr):
-    if arr == list(sorted(arr)):
-        return True
-    return False
+class Binomial:
+    def __init__(self, n):
+        n = min(n, MOD)
+        self.fact = [1, 1]
+        self.inv_fact = [1, 1]
+        self.inv = [0, 1]
+        
+        for i in crange(2, n):
+            self.fact.append(self.fact[-1] * i % MOD)
+            self.inv.append((MOD - MOD // i) * self.inv[MOD % i] % MOD)
+            self.inv_fact.append(self.inv_fact[-1] * self.inv[-1] % MOD)
+    
+
+    def comb(self, n, m):
+        if m < 0 or m > n:
+            return 0
+        m = min(m, n-m)
+        return self.fact[n] * self.inv_fact[m] * self.inv_fact[n-m] % MOD
+
+    ''' Lucas theorem
+    - mod should be less than 1e5
+    '''
+    def lucas(self, n, m): 
+        if m == 0:
+            return 1
+        return self.comb(n % MOD, m % MOD) * \
+            self.lucas(n // MOD, m // MOD) % MOD
 
 
-n = 3
-ans = Encodict(lambda : 0)
-for cp in itertools.permutations(range(1, 3*n+1)):
-    p = list(cp)
-    tot_left = 0
-    while not is_sorted(p):
-        new_p = sort_left(p)
-        if new_p != p:
-            p = new_p 
-            tot_left += 1
-        new_p = sort_right(p)
-        if new_p != p:
-            p = new_p
-            tot_left += 1
 
-    p = list(cp)
-    tot_right = 0
-    while not is_sorted(p):
-        new_p = sort_right(p)
-        if new_p != p:
-            p = new_p 
-            tot_right += 1
-        new_p = sort_left(p)
-        if new_p != p:
-            p = new_p
-            tot_right += 1
+def solve(cas):
+    global MOD
+    n, MOD = inp()
 
-    print(cp, tot_left, tot_right)
-    ans[min(tot_left, tot_right)] += 1
-print(ans.items())
+    bino = Binomial(n*3)
+    F = [0] * 4
+    F[0] = 1
+    F[1] = norm(bino.fact[n*2] * 2 - bino.fact[n])
+    for i in range(n+1):
+        F[2] += norm(bino.comb(n, i) ** 2) \
+            * (-bino.comb(n*2-i, n) + bino.comb(n*2, n) * 2)
+        F[2] = norm(F[2])
+    F[2] *= norm(bino.fact[n] ** 3)
+    F[2] = norm(F[2])
+    F[3] = bino.fact[n * 3]
+ 
+    F[3] -= F[2]
+    F[2] -= F[1]
+    F[1] -= F[0]
+
+    ans = 0
+    for i in range(4):
+        ans += F[i] * i
+        ans = norm(ans)
+    print(ans)
+
+
+cas = 1
+# cas = int(input())
+for _ in range(cas):
+    solve(cas)
