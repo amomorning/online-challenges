@@ -38,47 +38,33 @@ def printf(*args):
 # d8 = [(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
 # d6 = [(2,0),(1,1),(-1,1),(-2,0),(-1,-1),(1,-1)]  # hexagonal layout
 
-class Hash:
-    def __init__(self, s, seed=214131331, mod=9898798161):
-        self.n = len(s)
-        self.pw = [1]
-        self.mod = mod
-        self.table = [0] * (self.n + 1)
+def check(arr):
+    cur = 0
+    for i, x in enumerate(arr):
+        cur += x
+        if i+1 < len(arr) and cur == arr[i+1]:
+            return False
+    return True
 
-        for i in range(1, self.n):
-            self.pw.append(self.pw[-1] * seed % mod)
-        
-        for i in range(self.n-1, -1, -1):
-            self.table[i] = self.table[i+1] * seed + ord(s[i])
-            self.table[i] %= mod
-
-    def get(self, l, r):
-        return (self.table[l] - self.table[r+1] * self.pw[r-l+1] + self.mod) % self.mod
 
 
 def solve(cas):
     n, = inp()
-    t = input()
-    rt = t[::-1]
-
-    debug(t, rt)
-    h = Hash(t, 214131331, 9898798161)
-    rh = Hash(rt, 214131331, 9898798161)
-
-    if h.get(0, n-1) == rh.get(0, n-1):
-        print(t[n:])
-        print(0)
-        return
+    a = inp()
+    flag = False
     for i in range(n):
-        if h.get(0, i) == rh.get(n-i-1, n-1) and h.get(i+1, n-1) == rh.get(0, n-i-2):
-            print(t[i+1:i+n+1][::-1])
-            print(i+1)
-            return
-    print(-1)
+        if a[i] != a[0]:
+            flag = True
+    if flag:
+        while not check(a):
+            random.shuffle(a)
+        print("Yes")
+        printf(a)
+        return
+    print("No")
 
-        
 
 cas = 1
-# cas = int(input())
+cas = int(input())
 for _ in range(cas):
     solve(cas)
