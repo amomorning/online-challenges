@@ -2,7 +2,6 @@
 import collections, math, bisect, heapq, random, functools, itertools, copy, typing
 import platform; LOCAL = (platform.uname().node == 'AMO')
 
-# LOCAL = False
 
 import sys; input = lambda: sys.stdin.readline().rstrip("\r\n")
 inp = lambda f=int: list(map(f, input().split()))
@@ -40,72 +39,58 @@ def printf(*args):
 # d8 = [(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
 # d6 = [(2,0),(1,1),(-1,1),(-2,0),(-1,-1),(1,-1)]  # hexagonal layout
 
-def count(h, n):
-    ret = [0] * n
-    q = collections.deque()
-    for i in range(0, n):
-        if i:
-            ret[i] = ret[i-1]
-        debug('before:', q)
-        if q:
-            l, r, hr = q.popleft()
+class Stack(list):
+    def __init__(self, iterable=None):
+        if iterable is not None:
+            super().__init__(item for item in iterable)
+    
+    def push(self, *args):
+        if len(args) == 1:
+            self.append(args[0])
         else:
-            q.append((i, i, h[i]))
-            continue
-
-        assert r == i-1
-        if h[i] == hr+1:
-            r += 1
-            q.appendleft((l, r, h[i]))
-        elif h[i] > hr:
-            q.appendleft((l, r, hr))
-            q.appendleft((i, i, h[i]))
-        else:
-            cur = h[i]
-            while q and cur <= hr and cur+l-r >= 0:
-                ret[i] += (r-l+1) * (hr-cur+1)
-                cur = cur-1+l-r
-                l, r, hr = q.popleft()
-                debug(f'{cur=}', f'{ret[i]=}')
-                debug(l, r, hr)
-            
-            if cur-1 > hr:
-                q.appendleft((l, r, hr))
-                q.appendleft((r+1, i, h[i]))
-            elif cur + l - r < 1:
-                    
-                debug(l, r, hr, cur)
-                p = r-cur+1
-                # debug(r, p, hr, cur)
-                ret[i] += (r-p) * (hr-cur+1)
-                ret[i] += (hr+l-r + hr+p-r) * (p-l+1) // 2
-                while q:
-                    l, r, hr = q.popleft()
-                    ret[i] += (hr+l-r + hr) * (r-l+1) // 2
-                debug(f'{ret[i]=}', (r-p) * (hr-cur+1), (hr+l-r + hr+p-r) * (p-l) // 2)
-                q.appendleft((p, i, h[i]))
-            else:
-                ret[i] += (r-l+1) * (hr-cur+1)
-                q.appendleft((l, i, h[i]))
-        debug('after:', q)
-        debug('-----------------')
-            
-            
-    return ret
-                
+            self.append(args)
+    
+    def back(self):
+        return self[-1]
+    
+    def empty(self):
+        return len(self) == 0
+    
+    def length(self):
+        return len(self)
+    
+class Boom:
+    def __init__(self) -> None:
+        self.stack = Stack()
+        self.sum = 0
+    
+    def append(self, h):
+        l1, h1 = 1, h
+        while self.stack and self.stack.back()[1] > h1-l1:
+            l0, h0 = self.stack.pop()
+            self.sum -= (h0 + h0 - l0 + 1) * l0 // 2
+            l1 += l0
+        l1 = min(l1, h1)
+        self.sum += (h1 + h1 - l1 + 1) * l1 // 2
+        self.stack.push(l1, h1)
 
 
 def solve(cas):
     n, = inp()
     h = inp()
-    l = count(h, n)
-    r = count(h[::-1], n)[::-1]
-    ans = sum(h)
-    debug(l)
-    debug(r)
+    f = [0] * n
+    boom = Boom()
     for i in range(n):
-        ans = min(ans, l[i] + r[i] + h[i])
-    print(ans)
+        boom.append(h[i])
+        f[i] += boom.sum - h[i]
+    
+    boom = Boom()
+    for i in range(n-1, -1, -1):
+        boom.append(h[i])
+        f[i] += boom.sum - h[i] 
+    
+    res = sum(h) - max(f)
+    print(res)
     
 
 cas = 1
