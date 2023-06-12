@@ -1,16 +1,17 @@
+inp = lambda: list(map(int, input().split()))
 
 def goto(v):
     print(v, flush=True)
-    return list(map(int, input().split()))[1:]
+    return inp()[1:]
 
 def solve():
-    n, m = map(int, input().split())
+    n, m = inp()
     G = [list() for _ in range(n+1)]
     vis = [0] * (n+1)
     pa = [-1] * (n+1)
 
     u = 1
-    G[u] = list(map(int, input().split()))[1:]
+    G[u] = inp()[1:]
     while u!=-1:
         vis[u] = 1
         for v in G[u]:
@@ -31,7 +32,5 @@ def solve():
 
 
 solve()
-
-
 
 
