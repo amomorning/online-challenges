@@ -50,6 +50,8 @@ def calc_julian(r):
         r -= 365+(y%4==0)
         y += 1
     
+    if r == 0:
+        return 31, 12, y-1
 
     # calc month and day
     for i in range(12):
