@@ -34,25 +34,52 @@ def printf(*args):
 # d4 = [(1,0),(0,1),(-1,0),(0,-1)]
 # d8 = [(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
 # d6 = [(2,0),(1,1),(-1,1),(-2,0),(-1,-1),(1,-1)]  # hexagonal layout
+class Encodict:
+    def __init__(self, func=lambda : 0):
+        self.RANDOM = random.randint(0, 1<<32)
+        self.default = func
+        self.dict = {}
+    
+    def __getitem__(self, key):
+        k = self.RANDOM ^ key
+        if k not in self.dict:
+            self.dict[k] = self.default()
+        return self.dict[k]
+    
+    def __setitem__(self, key, item):
+        k = self.RANDOM ^ key
+        self.dict[k] = item
+
+    def keys(self):
+        return [self.RANDOM ^ i for i in self.dict]
+    
+    def items(self):
+        return [(self.RANDOM ^ i, self.dict[i]) for i in self.dict]
+    
+    def sorted(self, by_value=False, reverse=False):
+        if by_value:
+            self.dict = dict(sorted(self.dict.items(), \
+                key=lambda x:x[1], reverse=reverse))
+        else:
+            self.dict = dict(sorted(self.dict.items(), \
+                key=lambda x:self.RANDOM^x[0], reverse=reverse))
 
 def solve(cas):
     n, = inp()
     a = inp()
     MASK = (1<<31)-1
 
-    d = {}
+    d = Encodict(lambda:0)
     for x in a:
-        d[x] = d.get(x, 0)+1
+        d[x] += 1
+
     tot = 0
-    vis = {}
-    for x in d:
-        if vis.get(x, 0) > 0: continue
-        tot += max(d[x], d.get(x^MASK, 0))
-        vis[x^MASK] = 1
+    
+    for x in d.keys():
+        tot += max(d[x], d[x^MASK])
+        d[x^MASK] = 0
+        d[x] = 0
     print(tot)
-
-
-
 
 
 
