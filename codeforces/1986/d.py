@@ -35,25 +35,43 @@ def printf(*args):
 # d8 = [(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
 # d6 = [(2,0),(1,1),(-1,1),(-2,0),(-1,-1),(1,-1)]  # hexagonal layout
 
-
 def solve(cas):
-    n, m = inp()
+    n, = inp()
     s = input()
-    a = inp()
-    c = input()
-
-    ls = list(s)
-    a = sorted(list(set(a)))
-    c = sorted(list(c))
-    for i in range(len(a)):
-        ls[a[i]-1] = c[i]
-    print(''.join(ls))
-
-
+    if n == 2:
+        print(int(s))
+        return
+        
     
-    
+    def min_calc(arr):
+        res = []
+        for a in arr:
+            if a == 0:
+                return 0
+            elif a != 1:
+                res.append(a)
+
+        if len(res) == 0:
+            return 1
+        return sum(res)
+
+    mn = 10**9
+    for i in range(n-1):
+        ls = []
+        for j in range(n):
+            if j == i+1: continue
+            if i == j:
+                ls.append(int(s[i]+s[i+1]))
+            else:
+                ls.append(int(s[j]))
+        # debug(ls)
+        mn = min(mn, min_calc(ls))
+    print(mn)
 
 
+        
+        
+        
 
 cas = 1
 cas = int(input())
